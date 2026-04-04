@@ -1,0 +1,26 @@
+repository: IsmaelMartinez/lounge-tv
+
+roadmap:
+  path: ROADMAP.md
+
+schedule:
+  assess: daily
+  ideate: weekly
+
+providers:
+  default: gemini
+
+context: |
+  Lounge TV is an open-source, privacy-first IPTV player built as a single
+  self-contained HTML file. It plays free-to-air HLS streams in any browser
+  and on LG webOS Smart TVs. No accounts, no telemetry, no build step.
+  The project prioritises simplicity and mobile performance.
+
+limits:
+  max_issues_per_run: 3
+  require_approval: true
+
+observe:
+  issues_closed_days: 90
+  prs_merged_days: 90
+  releases_count: 10
