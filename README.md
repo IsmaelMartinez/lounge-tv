@@ -47,7 +47,26 @@ Lounge TV works on LG webOS Smart TVs. See [docs/SETUP-WEBOS.md](docs/SETUP-WEBO
 
 ## Roadmap
 
-Phase 1: Single-file IPTV player (current), Phase 2: Pi proxy backend for CORS-blocked streams, Phase 3: Acestream engine bridge, Phase 4: EPG programme guide.
+### Phase 1: Single-file IPTV player (current)
+
+The player works in any browser today. 25 curated free-to-air channels load instantly, with thousands more available on demand via the IPTV directory.
+
+### Phase 1.5: LG webOS deployment investigation
+
+Before investing in a proxy backend, we need to validate the webOS deployment path. Key questions to answer:
+
+- Developer Mode setup: how to enable, the 50-hour session expiry, and whether rooting is worth it for persistent installs.
+- App packaging: what `ares-package` actually requires, icon sizes, manifest fields, and whether the single HTML file approach works as-is or needs a wrapper.
+- LG Content Store submission: is it free? What's the review process? What are the content/quality requirements? How long does review take? Are there restrictions on IPTV-style apps?
+- Sideloading vs Store: pros/cons of each path. Sideloading is simpler but expires. Store is permanent but has review overhead.
+- CORS behaviour on webOS: which streams work directly on the TV's browser vs which need a proxy. This determines whether Phase 2 is a hard requirement or a nice-to-have.
+- Alternative: hosted web app mode — can the TV just bookmark a URL served from a Pi on the local network, bypassing the app store entirely?
+
+### Phase 2: Pi proxy backend for CORS-blocked streams
+
+### Phase 3: Acestream engine bridge
+
+### Phase 4: EPG programme guide
 
 ## Contributing
 
