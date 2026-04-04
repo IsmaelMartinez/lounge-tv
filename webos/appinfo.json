@@ -1,0 +1,13 @@
+{
+  "id": "com.ismaelmartinez.loungetv",
+  "version": "1.0.0",
+  "vendor": "Ismael Martinez",
+  "type": "web",
+  "main": "index.html",
+  "title": "Lounge TV",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "bgColor": "#0a0a0c",
+  "resolution": "1920x1080",
+  "disableBackHistoryAPI": false
+}
