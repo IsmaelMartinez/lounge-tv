@@ -521,67 +521,43 @@ body.ctrl-on .vw { padding-bottom: 70px; }
  * MIT License
  */
 
-const S = {
+var S = {
   chs: [], fil: [], fi: 0, pid: -1, tab: 'all', grp: 'all',
   favs: new Set(JSON.parse(localStorage.getItem('lounge-tv-favs') || '[]')),
   hls: null, hlsP: null, urls: new Set(), cache: {},
   sr: [], srP: 0, srF: [], hcOn: false, hcX: false, grpQ: '', ctrlHover: false
 };
-const PG = 50;
-const PARALLEL = 10;
+var PG = 50;
 
-const BUILT = [
+var BUILT = [
   {name:"Big Buck Bunny",group:"Test",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"},
   {name:"Tears of Steel",group:"Test",url:"https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8"},
   {name:"Apple fMP4 Test",group:"Test",url:"https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8"},
   {name:"Akamai Live Test",group:"Test",url:"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"},
-  {name:"Blender Open Movies 24/7",group:"Test",url:"https://ireplay.tv/test/blender.m3u8"},
   {name:"Al Jazeera English",group:"News",url:"https://live-hls-web-aje.getaj.net/AJE/01.m3u8",logo:"https://i.imgur.com/gXnVOMr.png"},
   {name:"France 24 English",group:"News",url:"https://stream.france24.com/live/hls/En/index.m3u8",logo:"https://i.imgur.com/NpfNVxV.png"},
   {name:"France 24 Espanol",group:"News",url:"https://stream.france24.com/live/hls/Es/index.m3u8"},
-  {name:"France 24 Francais",group:"News",url:"https://stream.france24.com/live/hls/Fr/index.m3u8"},
   {name:"DW News",group:"News",url:"https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8",logo:"https://i.imgur.com/A1xYhHY.png"},
-  {name:"DW Deutsch",group:"News",url:"https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"},
-  {name:"DW Espanol",group:"News",url:"https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8"},
   {name:"NHK World Japan",group:"News",url:"https://nhkworld.webcdn.stream.ne.jp/www11/nhkworld-tv/domestic/263942/live_wa_s.m3u8"},
-  {name:"CGTN",group:"News",url:"https://news.cgtn.com/resource/live/english/cgtn-news.m3u8"},
-  {name:"CGTN Espanol",group:"News",url:"https://news.cgtn.com/resource/live/espanol/cgtn-e.m3u8"},
   {name:"Euronews English",group:"News",url:"https://rakuten-euronews-1-eu.samsung.wurl.tv/manifest/playlist.m3u8"},
-  {name:"TRT World",group:"News",url:"https://tv-trtworld.medya.trt.com.tr/master.m3u8"},
-  {name:"arirang TV (Korea)",group:"News",url:"https://aglive.akamaized.net/hls/live/2033784/world/master.m3u8"},
   {name:"La 1 TVE",group:"Spain",url:"https://rtvelivestream-clnx.rtve.es/rtvesec/la1/la1_main_dvr.m3u8"},
   {name:"La 2 TVE",group:"Spain",url:"https://rtvelivestream-clnx.rtve.es/rtvesec/la2/la2_main_dvr.m3u8"},
   {name:"Canal 24h",group:"Spain",url:"https://rtvelivestream-clnx.rtve.es/rtvesec/24h/24h_main_dvr.m3u8"},
   {name:"Teledeporte",group:"Spain",url:"https://rtvelivestream-clnx.rtve.es/rtvesec/tdp/tdp_main_dvr.m3u8"},
-  {name:"Clan TVE",group:"Spain",url:"https://rtvelivestream-clnx.rtve.es/rtvesec/clan/clan_main_dvr.m3u8"},
   {name:"Canal Sur Andalucia",group:"Spain",url:"https://cdnlive.codev8.net/caborian/Stream2/Stream2.m3u8"},
   {name:"TV3 Catalunya",group:"Spain",url:"https://directes-tv-int.ccma.cat/live-origin/tv3-hls/master.m3u8"},
-  {name:"3/24 Catalunya",group:"Spain",url:"https://directes-tv-int.ccma.cat/live-origin/324-hls/master.m3u8"},
   {name:"ETB 1 (Basque)",group:"Spain",url:"https://etbvnogeo.eitb.eus/eitb_etb1/index.m3u8"},
   {name:"ETB 2 (Basque)",group:"Spain",url:"https://etbvnogeo.eitb.eus/eitb_etb2/index.m3u8"},
   {name:"TVG (Galicia)",group:"Spain",url:"https://america-crtvg.flumotion.com/playlist.m3u8"},
-  {name:"Aragon TV",group:"Spain",url:"https://arfrslvl2.stream.aragon.es:8443/hls/ara_tv_live.m3u8"},
-  {name:"IB3 (Balearic)",group:"Spain",url:"https://ib3tv.ib3tv.com/hls/live.m3u8"},
   {name:"Sky News",group:"UK",url:"https://linear-322.frequency.stream/dist/localnow/322/hls/master/playlist.m3u8"},
-  {name:"France 2",group:"France",url:"https://france2-hls-lives.akamaized.net/hls/live/2032498/FR2/master.m3u8"},
-  {name:"France 3",group:"France",url:"https://france3-hls-lives.akamaized.net/hls/live/2029025/FR3/master.m3u8"},
-  {name:"France 5",group:"France",url:"https://france5-hls-lives.akamaized.net/hls/live/2037498/FR5/master.m3u8"},
   {name:"ARTE (French)",group:"France",url:"https://artesimulcast.akamaized.net/hls/live/2031003/artelive_fr/index.m3u8"},
   {name:"ARTE (German)",group:"Germany",url:"https://artesimulcast.akamaized.net/hls/live/2030993/artelive_de/index.m3u8"},
   {name:"Das Erste",group:"Germany",url:"https://derste247liveint.akamaized.net/hls/live/2013718/derste247int/master.m3u8"},
-  {name:"ZDF",group:"Germany",url:"https://zdf-hls-15.akamaized.net/hls/live/2016498/de/veryhigh/master.m3u8"},
-  {name:"Tagesschau24",group:"Germany",url:"https://tagesschau-lh.akamaihd.net/i/tagesschau_1@119231/master.m3u8"},
-  {name:"Rai 1",group:"Italy",url:"https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=2606803&output=56&forceUserAgent=raikiern"},
-  {name:"Rai News 24",group:"Italy",url:"https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=1&output=56"},
-  {name:"RTP 1",group:"Portugal",url:"https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8"},
-  {name:"RTP 2",group:"Portugal",url:"https://streaming-live.rtp.pt/liverepeater/smil:rtp2HD.smil/playlist.m3u8"},
   {name:"NASA TV",group:"Science",url:"https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8"},
-  {name:"NASA TV Media",group:"Science",url:"https://ntv2.akamaized.net/hls/live/2014076/NASA-NTV2-HLS/master.m3u8"},
   {name:"Lofi Girl Radio",group:"Music",url:"https://play.streamafrica.net/lofiradio"},
-  {name:"M2O Music TV",group:"Music",url:"https://4c4b867c89244861ac216426883d1ad0.mediatailor.eu-west-1.amazonaws.com/v1/master/04fd913bb55440b7b8ed60e0cd6a1848db7b9357/RadioMediaset_m2oTV/HLS/master.m3u8"},
 ];
 
-const BRW = [
+var BRW = [
   {k:'es',l:'\u{1F1EA}\u{1F1F8} Spain',u:'https://iptv-org.github.io/iptv/countries/es.m3u'},
   {k:'gb',l:'\u{1F1EC}\u{1F1E7} UK',u:'https://iptv-org.github.io/iptv/countries/gb.m3u'},
   {k:'us',l:'\u{1F1FA}\u{1F1F8} USA',u:'https://iptv-org.github.io/iptv/countries/us.m3u'},
@@ -605,40 +581,67 @@ const BRW = [
   {k:'c_comedy',l:'\u{1F602} Comedy',u:'https://iptv-org.github.io/iptv/categories/comedy.m3u'},
   {k:'c_general',l:'\u{1F4FA} General',u:'https://iptv-org.github.io/iptv/categories/general.m3u'},
   {k:'freetv',l:'\u2705 Free-TV',u:'https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8'},
-  {k:'tvpass',l:'\u{1F4E1} TVPass',u:'https://tvpass.org/playlist/m3u'},
   {k:'lang_spa',l:'\u{1F5E3} Spanish',u:'https://iptv-org.github.io/iptv/languages/spa.m3u'},
   {k:'lang_eng',l:'\u{1F5E3} English',u:'https://iptv-org.github.io/iptv/languages/eng.m3u'},
   {k:'all_iptv',l:'\u{1F30D} ALL 8000+',u:'https://iptv-org.github.io/iptv/index.m3u'},
 ];
 
-/** Parse M3U playlist text into channel objects */
+var STATUS_TEXT = {ok: 'Online', fail: 'Offline', geo: 'Geo-blocked/403', unk: 'Not checked', testing: 'Testing...'};
+
 function pm(t) {
-  const ls = t.split('\n').map(l => l.trim()).filter(Boolean), r = [];
-  let c = {};
-  for (const l of ls) {
-    if (l.startsWith('#EXTINF')) {
-      const m = l.substring(l.indexOf(':') + 1), cm = m.lastIndexOf(',');
+  var ls = t.split('\n'), r = [], c = {};
+  for (var i = 0; i < ls.length; i++) {
+    var l = ls[i].trim();
+    if (!l) continue;
+    if (l.indexOf('#EXTINF') === 0) {
+      var m = l.substring(l.indexOf(':') + 1), cm = m.lastIndexOf(',');
       c = {
         name: cm >= 0 ? m.substring(cm + 1).trim() : 'Unknown',
         group: (m.match(/group-title="([^"]*)"/) || [])[1] || 'General',
         logo: (m.match(/tvg-logo="([^"]*)"/) || [])[1] || ''
       };
-    } else if (!l.startsWith('#') && (l.startsWith('http://') || l.startsWith('https://'))) {
-      c.url = l; r.push({...c}); c = {};
+    } else if (l.indexOf('#') !== 0 && (l.indexOf('http://') === 0 || l.indexOf('https://') === 0)) {
+      c.url = l; r.push(c); c = {};
     }
   }
   return r;
 }
 
-/** Initialise the app */
+/* ── Shared helpers ── */
+function saveFavs() { localStorage.setItem('lounge-tv-favs', JSON.stringify([...S.favs])); }
+
+function addUrl(url) { S.urls.add(url); }
+
+function logoHtml(ch, cls) {
+  var ini = ch.name.split(' ').map(function(w) { return w[0]; }).join('').substring(0, 2).toUpperCase();
+  return '<div class="' + cls + '">' + (ch.logo ? '<img src="' + ch.logo + '" onerror="this.parentElement.textContent=\'' + ini + '\'">' : ini) + '</div>';
+}
+
+function importChannels(chs) {
+  var o = S.chs.length, added = 0;
+  chs.forEach(function(c, i) {
+    if (S.urls.has(c.url)) return;
+    c.id = o + added; c.status = 'unk';
+    S.chs.push(c); addUrl(c.url); added++;
+  });
+  if (added) { ref(); }
+  return added;
+}
+
+function resetHcBtn() {
+  var btn = document.getElementById('hcb');
+  btn.textContent = '\u{1FA7A} Check visible'; btn.classList.remove('run');
+}
+
 function init() {
-  S.chs = BUILT.map((c, i) => ({...c, id: i, status: 'unk'}));
-  synU(); ref();
-  document.getElementById('brs').innerHTML = BRW.map(
-    b => '<div class="br" data-k="' + b.k + '" onclick="pick(\'' + b.k + '\')">' + b.l + '</div>'
-  ).join('');
+  S.chs = BUILT.map(function(c, i) { return {name: c.name, group: c.group, url: c.url, logo: c.logo || '', id: i, status: 'unk'}; });
+  S.urls = new Set(S.chs.map(function(c) { return c.url; }));
+  ref();
+  document.getElementById('brs').innerHTML = BRW.map(function(b) {
+    return '<div class="br" data-k="' + b.k + '" onclick="pick(\'' + b.k + '\')">' + b.l + '</div>';
+  }).join('');
   if (window.innerWidth <= 900) { document.getElementById('side').classList.add('closed'); updMB(); }
-  const v = document.getElementById('vid');
+  var v = document.getElementById('vid');
   v.addEventListener('timeupdate', function() {
     if (!v.duration || !isFinite(v.duration)) return;
     document.getElementById('sk').value = (v.currentTime / v.duration) * 1000;
@@ -647,39 +650,9 @@ function init() {
   });
   v.addEventListener('playing', function() { document.getElementById('bPl').textContent = '\u23F8'; });
   v.addEventListener('pause', function() { document.getElementById('bPl').textContent = '\u25B6'; });
-  autoLoadAll();
+  tst(S.chs.length + ' curated channels loaded. Use \u{1F50D} Find to browse more.', 'ok');
 }
 
-/** Load channels from public IPTV sources on startup */
-async function autoLoadAll() {
-  tst('Loading channels from multiple sources...', 'ok');
-  const sources = [
-    {url: 'https://iptv-org.github.io/iptv/index.m3u', name: 'iptv-org'},
-    {url: 'https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8', name: 'Free-TV'},
-  ];
-  var totalAdded = 0;
-  for (var i = 0; i < sources.length; i++) {
-    var src = sources[i];
-    try {
-      var res = await fetch(src.url);
-      if (!res.ok) continue;
-      var chs = pm(await res.text());
-      var added = 0;
-      chs.forEach(function(c) {
-        if (S.urls.has(c.url)) return;
-        c.id = S.chs.length; c.status = 'unk';
-        S.chs.push(c); added++;
-      });
-      synU(); ref();
-      totalAdded += added;
-      tst(src.name + ': +' + added + ' channels', 'ok');
-    } catch (e) { /* skip */ }
-  }
-  if (totalAdded) tst('Loaded ' + totalAdded + ' total (' + S.chs.length + ' channels). Filter \u2192 Check visible.', 'ok');
-  else tst('Failed to load \u2014 download & open locally', 'er');
-}
-
-/** Export channels as downloadable M3U */
 function exportM3U() {
   var hasFavs = S.favs.size > 0;
   var hasOnline = S.chs.some(function(c) { return c.status === 'ok'; });
@@ -703,8 +676,7 @@ function doExport(channels, filename) {
 }
 
 function fmt(s) { var m = Math.floor(s / 60), sc = Math.floor(s % 60); return String(m).padStart(2, '0') + ':' + String(sc).padStart(2, '0'); }
-function synU() { S.urls = new Set(S.chs.map(function(c) { return c.url; })); }
-function reId() { S.chs.forEach(function(c, i) { c.id = i; }); synU(); }
+function reId() { S.chs.forEach(function(c, i) { c.id = i; }); S.urls = new Set(S.chs.map(function(c) { return c.url; })); }
 
 /* ── Sidebar ── */
 function togS() {
@@ -764,12 +736,11 @@ function rL() {
     return;
   }
   el.innerHTML = S.fil.map(function(ch, i) {
-    var ini = ch.name.split(' ').map(function(w) { return w[0]; }).join('').substring(0, 2).toUpperCase();
     var st = ch.status || 'unk';
-    var stT = {ok: 'Online', fail: 'Offline', geo: 'Geo-blocked/403', unk: 'Not checked', testing: 'Testing...'}[st] || '';
+    var stT = STATUS_TEXT[st] || '';
     return '<div class="ci ' + (i === S.fi ? 'foc' : '') + ' ' + (S.pid === ch.id ? 'pla' : '') + '" onclick="play(' + i + ')">' +
       '<div class="cst ' + st + '" title="' + stT + '"></div>' +
-      '<div class="cic">' + (ch.logo ? '<img src="' + ch.logo + '" onerror="this.parentElement.textContent=\'' + ini + '\'">' : ini) + '</div>' +
+      logoHtml(ch, 'cic') +
       '<div class="cd"><div class="cnm">' + ch.name + '</div><div class="cg">' + ch.group + (st !== 'unk' ? ' \u00B7 ' + stT : '') + '</div></div>' +
       '<div class="cha">' +
         '<button class="cf ' + (S.favs.has(ch.id) ? 'on' : '') + '" onclick="event.stopPropagation();togF(' + ch.id + ')">' + (S.favs.has(ch.id) ? '\u2605' : '\u2606') + '</button>' +
@@ -786,9 +757,7 @@ function remCh(id) {
   S.chs = S.chs.filter(function(c) { return c.id !== id; });
   S.favs.delete(id);
   if (S.pid === id) S.pid = -1;
-  reId();
-  localStorage.setItem('lounge-tv-favs', JSON.stringify([...S.favs]));
-  ref();
+  reId(); saveFavs(); ref();
   tst(ch.name + ' removed', 'ok');
 }
 
@@ -798,9 +767,7 @@ function removeDead() {
   var count = dead.length;
   dead.forEach(function(c) { S.favs.delete(c.id); });
   S.chs = S.chs.filter(function(c) { return c.status !== 'fail' && c.status !== 'geo'; });
-  reId();
-  localStorage.setItem('lounge-tv-favs', JSON.stringify([...S.favs]));
-  ref();
+  reId(); saveFavs(); ref();
   tst('Removed ' + count + ' dead/geo-blocked channels', 'ok');
 }
 
@@ -824,6 +791,7 @@ function toggleFullscreen() {
 
 /* ── Auto-hide controls ── */
 var ctrlTimer = null;
+var plRect = null;
 function showControls() {
   var c = document.getElementById('ctrl');
   if (!c.classList.contains('vis')) return;
@@ -838,9 +806,10 @@ document.addEventListener('DOMContentLoaded', function() {
   c.addEventListener('mouseenter', function() { S.ctrlHover = true; c.classList.remove('hide'); c.classList.add('show'); });
   c.addEventListener('mouseleave', function() { S.ctrlHover = false; showControls(); });
 });
+window.addEventListener('resize', function() { plRect = null; });
 document.addEventListener('mousemove', function(e) {
-  var rect = document.getElementById('pl').getBoundingClientRect();
-  if (e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) showControls();
+  if (!plRect) plRect = document.getElementById('pl').getBoundingClientRect();
+  if (e.clientX >= plRect.left && e.clientX <= plRect.right && e.clientY >= plRect.top && e.clientY <= plRect.bottom) showControls();
 });
 document.addEventListener('touchstart', showControls);
 
@@ -849,13 +818,12 @@ function play(fi) {
   var ch = S.fil[fi];
   if (!ch) return;
   S.pid = ch.id; S.fi = fi;
-  pUrl(ch.name, ch.url, ch.group, false);
+  playStream(ch.name, ch.url, ch.group);
   if (window.innerWidth <= 900 && !document.getElementById('side').classList.contains('closed')) togS();
   rL();
 }
 
-function pUrl(name, url, group, pip) {
-  if (pip) { playPip(name, url); return; }
+function playStream(name, url, group) {
   var v = document.getElementById('vid'), ov = document.getElementById('ov');
   document.getElementById('oi').innerHTML = '<div class="sp"></div>';
   document.getElementById('ot').textContent = 'Loading ' + name + '...';
@@ -925,25 +893,22 @@ function zap(d) {
   var n = cur + d;
   if (n < 0) n = S.chs.length - 1;
   if (n >= S.chs.length) n = 0;
-  S.tab = 'all'; S.grp = 'all';
-  document.querySelectorAll('.tab').forEach(function(t, i) { t.classList.toggle('on', i === 0); });
-  ref();
+  setTab('all');
   var fi = S.fil.findIndex(function(c) { return c.id === S.chs[n].id; });
   if (fi >= 0) play(fi);
 }
 function togF(id) {
   if (S.favs.has(id)) S.favs.delete(id); else S.favs.add(id);
-  localStorage.setItem('lounge-tv-favs', JSON.stringify([...S.favs]));
-  ref();
+  saveFavs(); ref();
 }
 
-/* ── Health Check ── */
+/* ── Health Check (sequential, one at a time) ── */
 var hcDone = 0, hcOk = 0, hcFail = 0, hcGeo = 0, hcTotal = 0;
 
 function hcUpdate() {
   document.getElementById('hcpf').style.width = (hcDone / hcTotal * 100) + '%';
   document.getElementById('hcs').textContent = hcOk + '\u2713 ' + hcFail + '\u2717 ' + hcGeo + '\u26A0 \u2014 ' + hcDone + '/' + hcTotal;
-  if (hcDone % 5 === 0 || hcDone === hcTotal) rL();
+  if (hcDone % 3 === 0 || hcDone === hcTotal) rL();
 }
 
 async function runHealthCheck(all) {
@@ -953,30 +918,19 @@ async function runHealthCheck(all) {
   btn.textContent = '\u23F9 Stop'; btn.classList.add('run');
   var list = all ? S.chs : S.fil;
   hcDone = 0; hcOk = 0; hcFail = 0; hcGeo = 0; hcTotal = list.length;
-  if (!hcTotal) { S.hcOn = false; btn.textContent = '\u{1FA7A} Check visible'; btn.classList.remove('run'); tst('No channels', 'er'); return; }
-  await runParallel(list, PARALLEL);
-  S.hcOn = false; S.hcX = false;
-  btn.textContent = '\u{1FA7A} Check visible'; btn.classList.remove('run');
-  rL();
-  tst('Done: ' + hcOk + ' online, ' + hcFail + ' offline, ' + hcGeo + ' geo-blocked', 'ok');
-}
-
-async function runParallel(list, concurrency) {
-  var idx = 0;
-  async function worker() {
-    while (idx < list.length && !S.hcX) {
-      var i = idx++;
-      var ch = list[i];
-      ch.status = 'testing';
-      ch.status = await testUrl(ch.url);
-      hcDone++;
-      if (ch.status === 'ok') hcOk++; else if (ch.status === 'geo') hcGeo++; else hcFail++;
-      hcUpdate();
-    }
+  if (!hcTotal) { S.hcOn = false; resetHcBtn(); tst('No channels', 'er'); return; }
+  // Test one at a time to keep mobile friendly
+  for (var i = 0; i < list.length && !S.hcX; i++) {
+    var ch = list[i];
+    ch.status = 'testing';
+    ch.status = await testUrl(ch.url);
+    hcDone++;
+    if (ch.status === 'ok') hcOk++; else if (ch.status === 'geo') hcGeo++; else hcFail++;
+    hcUpdate();
   }
-  var workers = [];
-  for (var w = 0; w < Math.min(concurrency, list.length); w++) workers.push(worker());
-  await Promise.all(workers);
+  S.hcOn = false; S.hcX = false;
+  resetHcBtn(); rL();
+  tst('Done: ' + hcOk + ' online, ' + hcFail + ' offline, ' + hcGeo + ' geo-blocked', 'ok');
 }
 
 function testUrl(url) {
@@ -995,11 +949,12 @@ function testHls(url) {
     if (!Hls.isSupported()) { resolve('unk'); return; }
     var h = new Hls({maxBufferLength: 3, enableWorker: false});
     var v = document.createElement('video');
-    var t = setTimeout(function() { h.destroy(); resolve('fail'); }, 6000);
+    var cleanup = function() { h.destroy(); v.src = ''; v.load(); };
+    var t = setTimeout(function() { cleanup(); resolve('fail'); }, 6000);
     h.loadSource(url); h.attachMedia(v);
-    h.on(Hls.Events.MANIFEST_PARSED, function() { clearTimeout(t); h.destroy(); resolve('ok'); });
+    h.on(Hls.Events.MANIFEST_PARSED, function() { clearTimeout(t); cleanup(); resolve('ok'); });
     h.on(Hls.Events.ERROR, function(_, d) {
-      if (d.fatal) { clearTimeout(t); h.destroy();
+      if (d.fatal) { clearTimeout(t); cleanup();
         if (d.response && (d.response.code === 403 || d.response.code === 451)) resolve('geo');
         else resolve('fail'); }
     });
@@ -1046,14 +1001,13 @@ function rSR() {
   el.innerHTML =
     '<div class="sr-msg" style="padding:4px 14px;font-size:9px;display:flex;align-items:center;justify-content:space-between;">' +
       '<span>' + pg.length + ' of ' + r.length + '</span>' +
-      (newCount > 0 ? '<button class="rb add" onclick="addAllSR()" style="font-size:10px;padding:4px 12px;">+ Add all ' + newCount + ' new & test</button>' : '') +
+      (newCount > 0 ? '<button class="rb add" onclick="addAllSR()" style="font-size:10px;padding:4px 12px;">+ Add all ' + newCount + ' new</button>' : '') +
     '</div>' +
     pg.map(function(ch) {
-      var ini = ch.name.split(' ').map(function(w) { return w[0]; }).join('').substring(0, 2).toUpperCase();
       var a = S.urls.has(ch.url);
-      return '<div class="ri"><div class="rl">' + (ch.logo ? '<img src="' + ch.logo + '" onerror="this.parentElement.textContent=\'' + ini + '\'">' : ini) + '</div>' +
+      return '<div class="ri">' + logoHtml(ch, 'rl') +
         '<div class="rif"><div class="rn">' + ch.name + '</div><div class="rm">' + ch.group + '</div></div>' +
-        '<div class="ra"><button class="rb play" onclick="pUrl(\'' + esc(ch.name) + '\',\'' + esc(ch.url) + '\',\'' + esc(ch.group) + '\',true)">\u25B6</button>' +
+        '<div class="ra"><button class="rb play" onclick="playPip(\'' + esc(ch.name) + '\',\'' + esc(ch.url) + '\')">\u25B6</button>' +
         '<button class="rb ' + (a ? 'done' : 'add') + '" onclick="' + (a ? '' : "addC('" + esc(ch.name) + "','" + esc(ch.group) + "','" + esc(ch.url) + "','" + esc(ch.logo) + "')") + '">' + (a ? '\u2713' : '+') + '</button></div></div>';
     }).join('') +
     (more ? '<div class="lm"><button onclick="S.srP++;rSR()">Load more (' + (r.length - sh) + ')</button></div>' : '');
@@ -1061,35 +1015,15 @@ function rSR() {
 function addC(n, g, u, l) {
   if (S.urls.has(u)) return;
   var ch = {name: n, group: g, url: u, logo: l || '', id: S.chs.length, status: 'unk'};
-  S.chs.push(ch); synU(); ref(); rSR(); tst(n + ' added', 'ok'); autoTest(ch);
-}
-
-async function autoTest(ch) { ch.status = 'testing'; rL(); ch.status = await testUrl(ch.url); rL(); }
-
-async function autoTestBatch(startIdx) {
-  var batch = S.chs.slice(startIdx);
-  hcDone = 0; hcOk = 0; hcFail = 0; hcGeo = 0; hcTotal = batch.length;
-  document.getElementById('hcb').textContent = '\u231B Testing...';
-  document.getElementById('hcb').classList.add('run');
-  S.hcOn = true; S.hcX = false;
-  await runParallel(batch, PARALLEL);
-  S.hcOn = false;
-  document.getElementById('hcb').textContent = '\u{1FA7A} Check visible';
-  document.getElementById('hcb').classList.remove('run');
-  rL();
-  tst('Tested: ' + hcOk + ' online, ' + hcFail + ' offline, ' + hcGeo + ' geo-blocked', 'ok');
+  S.chs.push(ch); addUrl(u); ref(); rSR(); tst(n + ' added', 'ok');
 }
 
 function addAllSR() {
   var toAdd = S.srF.filter(function(c) { return !S.urls.has(c.url); });
   if (!toAdd.length) { tst('All already added', 'er'); return; }
-  var startIdx = S.chs.length;
-  toAdd.forEach(function(ch, i) {
-    S.chs.push({name: ch.name, group: ch.group, url: ch.url, logo: ch.logo || '', id: startIdx + i, status: 'unk'});
-  });
-  synU(); ref(); rSR();
-  tst('Added ' + toAdd.length + ' channels \u2014 testing...', 'ok');
-  autoTestBatch(startIdx);
+  var added = importChannels(toAdd);
+  rSR();
+  tst('Added ' + added + ' channels', 'ok');
 }
 
 /* ── Modal ── */
@@ -1109,15 +1043,14 @@ async function handleModalAdd() {
       btn = document.getElementById('mbtn');
 
   if (txt) {
-    if ((txt.startsWith('http://') || txt.startsWith('https://')) && txt.indexOf('\n') < 0 && txt.indexOf('#EXT') < 0) {
+    if ((txt.indexOf('http://') === 0 || txt.indexOf('https://') === 0) && txt.indexOf('\n') < 0 && txt.indexOf('#EXT') < 0) {
       addSng(name || uNm(txt), group, txt); hideModal(); return;
     }
     var chs = pm(txt);
     if (chs.length) {
-      var o = S.chs.length;
-      chs.forEach(function(c, i) { c.id = o + i; c.status = 'unk'; });
-      S.chs.push.apply(S.chs, chs); synU(); hideModal(); ref();
-      tst(chs.length + ' added \u2014 testing...', 'ok'); autoTestBatch(o); return;
+      var added = importChannels(chs);
+      hideModal();
+      tst(added + ' added', 'ok'); return;
     }
     if (!url) { tst('No channels found', 'er'); return; }
   }
@@ -1131,10 +1064,9 @@ async function handleModalAdd() {
       btn.classList.remove('ld'); btn.textContent = 'Add';
       var chs = pm(content);
       if (chs.length) {
-        var o = S.chs.length;
-        chs.forEach(function(c, i) { c.id = o + i; c.status = 'unk'; });
-        S.chs.push.apply(S.chs, chs); synU(); hideModal(); ref();
-        tst(chs.length + ' added \u2014 testing...', 'ok'); autoTestBatch(o); return;
+        var added = importChannels(chs);
+        hideModal();
+        tst(added + ' added', 'ok'); return;
       }
       if (content.indexOf('#EXT-X-') >= 0) { addSng(name || uNm(url), group, url); hideModal(); return; }
       tst('No channels \u2014 add a name for single stream', 'er');
@@ -1151,7 +1083,7 @@ async function handleModalAdd() {
 function addSng(n, g, u) {
   if (S.urls.has(u)) { tst('Already added', 'er'); return; }
   S.chs.push({name: n, group: g, url: u, logo: '', id: S.chs.length, status: 'unk'});
-  synU(); ref(); tst(n + ' added', 'ok');
+  addUrl(u); ref(); tst(n + ' added', 'ok');
 }
 
 function uNm(url) {
@@ -1179,7 +1111,6 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-/** Show a toast notification */
 function tst(m, t) {
   var e = document.getElementById('tst');
   e.textContent = m; e.className = 'toast vis ' + (t || 'ok');
