@@ -66,9 +66,9 @@ body {
 .tab:hover { background: var(--s2); color: var(--tx); }
 .tab.on { background: var(--ad); border-color: var(--ac); color: var(--ac); }
 .flts {
-  display: flex; gap: 3px; flex-wrap: nowrap; overflow-x: auto;
-  padding-bottom: 4px; scrollbar-width: thin;
-  scrollbar-color: var(--s3) transparent; -webkit-overflow-scrolling: touch;
+  display: flex; gap: 3px; flex-wrap: wrap;
+  padding-bottom: 4px; max-height: 72px; overflow-y: auto;
+  scrollbar-width: thin; scrollbar-color: var(--s3) transparent;
 }
 .fl {
   padding: 3px 8px; border-radius: 10px; background: var(--bg);
@@ -420,8 +420,7 @@ body.ctrl-on .vw { padding-bottom: 70px; }
         <button class="xb" onclick="togS()">&#10005;</button>
       </div>
       <div class="tabs">
-        <button class="tab on" onclick="setTab('picks')">Picks</button>
-        <button class="tab" onclick="setTab('all')">All</button>
+        <button class="tab on" onclick="setTab('all')">All</button>
         <button class="tab" onclick="setTab('fav')">&#9733; Favs</button>
         <button class="tab" onclick="setTab('live')">&#x1F7E2; Online</button>
       </div>
@@ -528,8 +527,7 @@ var S = {
   favs: new Set(JSON.parse(localStorage.getItem('lounge-tv-favs') || '[]')),
   hls: null, hlsP: null, urls: new Set(), cache: {},
   sr: [], srP: 0, srF: [], hcOn: false, hcX: false, grpQ: '', ctrlHover: false,
-  allValidated: null,
-  picks: new Set()
+  allValidated: null
 };
 var PG = 50;
 
@@ -642,18 +640,17 @@ async function init() {
   var loaded = false;
   try {
     var responses = await Promise.all([
-      fetch('data/curated.json'),
-      fetch('data/channels.json'),
-      fetch('data/picks.json')
+      fetch('data/picks.json'),
+      fetch('data/channels.json')
     ]);
-    var curatedRes = responses[0], channelsRes = responses[1], picksRes = responses[2];
-    if (curatedRes.ok && channelsRes.ok) {
-      var curated = await curatedRes.json();
+    var picksRes = responses[0], channelsRes = responses[1];
+    if (picksRes.ok && channelsRes.ok) {
+      var picksData = await picksRes.json();
       var allChannels = await channelsRes.json();
       var channelMap = {};
       allChannels.forEach(function(c) { channelMap[c.url] = c; });
       var chs = [];
-      curated.channels.forEach(function(entry) {
+      picksData.channels.forEach(function(entry) {
         var ch = channelMap[entry.url];
         if (ch) {
           chs.push({
@@ -668,10 +665,6 @@ async function init() {
         S.allValidated = allChannels;
         loaded = true;
       }
-      if (picksRes.ok) {
-        var picksData = await picksRes.json();
-        S.picks = new Set(picksData.channels.map(function(c) { return c.url; }));
-      }
     }
   } catch (e) {
     console.log('Failed to load channel data, using built-in list:', e);
@@ -682,7 +675,6 @@ async function init() {
     });
     S.allValidated = null;
   }
-  S.tab = 'picks';
   S.urls = new Set(S.chs.map(function(c) { return c.url; }));
   ref();
   var brsEl = document.getElementById('brs');
@@ -769,7 +761,6 @@ function rF(tabFiltered) {
 
 function ref() {
   var c = S.chs;
-  if (S.tab === 'picks') c = c.filter(function(x) { return S.picks.has(x.url); });
   if (S.tab === 'fav') c = c.filter(function(x) { return S.favs.has(x.id); });
   if (S.tab === 'live') c = c.filter(function(x) { return x.status === 'ok'; });
   var tabFiltered = c;
@@ -782,7 +773,7 @@ function ref() {
 function setTab(t) {
   S.tab = t; S.grp = 'all'; S.fi = 0;
   document.querySelectorAll('.tab').forEach(function(b, i) {
-    b.classList.toggle('on', (i === 0 && t === 'picks') || (i === 1 && t === 'all') || (i === 2 && t === 'fav') || (i === 3 && t === 'live'));
+    b.classList.toggle('on', (i === 0 && t === 'all') || (i === 1 && t === 'fav') || (i === 2 && t === 'live'));
   });
   ref();
 }
