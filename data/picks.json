@@ -1,0 +1,136 @@
+{
+  "channels": [
+    {
+      "url": "https://distro001-gb-hls1-prd.delivery.skycdp.com/easel_cdn/ngrp:weather_loop.stream_all/playlist.m3u8"
+    },
+    {
+      "url": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8"
+    },
+    {
+      "url": "https://amg00106-france24-france24-samsunguk-qvpp8.amagi.tv/playlist/amg00106-france24-france24-samsunguk/playlist.m3u8"
+    },
+    {
+      "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8"
+    },
+    {
+      "url": "https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8"
+    },
+    {
+      "url": "https://cdn4.skygo.mn/live/disk1/NHK_World_Premium/HLSv3-FTA/NHK_World_Premium.m3u8"
+    },
+    {
+      "url": "https://amg00654-itv-amg00654c35-rakuten-gb-7598.playouts.now.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://amg00654-itv-amg00654c1-samsung-au-1072.playouts.now.amagi.tv/itv-hellskitchen-samsung/playlist.m3u8"
+    },
+    {
+      "url": "https://amg00627-amg00627c40-rakuten-uk-5725.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanpopupcc-rakutenuk/playlist.m3u8"
+    },
+    {
+      "url": "https://amg00627-amg00627c23-samsung-au-4110.playouts.now.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://d2bog959vw5xq.cloudfront.net/playlist/amg00627-banijayfast-mythbusters-samsungau/playlist.m3u8"
+    },
+    {
+      "url": "https://amg00276-amg00276c2-rakuten-uk-3449.playouts.now.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://all3media-homes-under-the-hammer-1-au.samsung.wurl.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://all3media-international-undercoverboss-1-au.samsung.wurl.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://amg00353-amg00353c30-samsung-au-3440.playouts.now.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://amg01753-narrativeuk-amg01753c3-lg-gb-1833.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatmovies-lggb/playlist.m3u8"
+    },
+    {
+      "url": "https://amg01753-narrativeuk-amg01753c2-lg-gb-1832.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatchristmas-lggb/playlist.m3u8"
+    },
+    {
+      "url": "https://moviesphereuk-samsunguk.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://discoverfilm-discoverfilm-1-nl.samsung.wurl.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://stream.ecable.tv/afrobeats/index.m3u8"
+    },
+    {
+      "url": "https://abr.de1se01.v2beat.live/playlist.m3u8"
+    },
+    {
+      "url": "https://samsungau-qwestjazz-samsungtv-zw2jc.amagi.tv/playlist/samsungau-qwestjazz-samsungtv/playlist.m3u8"
+    },
+    {
+      "url": "https://hnc-free-viewlift.amagi.tv/HNC_AUSTRALIA.m3u8"
+    },
+    {
+      "url": "https://rightsboosterltd-scl-1-eu.rakuten.wurl.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://moonbug-rokuus.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://dy9gbyiaxw0rb.cloudfront.net/master.m3u8"
+    },
+    {
+      "url": "https://amg01753-narrativeuk-amg01753c1-lg-gb-1830.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-tinypop-lggb/playlist.m3u8"
+    },
+    {
+      "url": "https://amg01775-amg01775c1-amgplt0343.playout.now3.amagi.tv/playlist/amg01775-amg01775c1-amgplt0343/playlist.m3u8"
+    },
+    {
+      "url": "https://aenetworks-mysterytv-rakuten.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://lo3.gemporia.com/abrhobbymakerukgfx/smil:livestreamFullHD.smil/playlist.m3u8"
+    },
+    {
+      "url": "http://c3921155.edmonst.net/iptv/65C7UBRRW8GHQVYPH2MQT3SA/15171/index.m3u8"
+    },
+    {
+      "url": "https://abcnews-streams.akamaized.net/hls/live/2023560/abcnewshudson1/master_4000.m3u8"
+    },
+    {
+      "url": "https://d2ah48mnofquik.cloudfront.net/Backstage.m3u8"
+    },
+    {
+      "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8"
+    },
+    {
+      "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-courttv-tablo/playlist.m3u8"
+    },
+    {
+      "url": "https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://d3b6q2ou5kp8ke.cloudfront.net/ESPNTheOcho.m3u8"
+    },
+    {
+      "url": "https://dazn-combat-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-dazn-combat-rakuten/CDN/master.m3u8"
+    },
+    {
+      "url": "https://raycom-accdn-firetv.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://newidco-babysharktv-1-us.roku.wurl.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://dmr1h4skdal9h.cloudfront.net/playlist.m3u8"
+    },
+    {
+      "url": "https://dil9xdvretp0f.cloudfront.net/index.m3u8"
+    },
+    {
+      "url": "https://amc-absolutereality-1-us.plex.wurl.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-bouncexl-tablo/playlist.m3u8"
+    }
+  ]
+}

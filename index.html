@@ -420,7 +420,8 @@ body.ctrl-on .vw { padding-bottom: 70px; }
         <button class="xb" onclick="togS()">&#10005;</button>
       </div>
       <div class="tabs">
-        <button class="tab on" onclick="setTab('all')">All</button>
+        <button class="tab on" onclick="setTab('picks')">Picks</button>
+        <button class="tab" onclick="setTab('all')">All</button>
         <button class="tab" onclick="setTab('fav')">&#9733; Favs</button>
         <button class="tab" onclick="setTab('live')">&#x1F7E2; Online</button>
       </div>
@@ -526,7 +527,8 @@ var S = {
   favs: new Set(JSON.parse(localStorage.getItem('lounge-tv-favs') || '[]')),
   hls: null, hlsP: null, urls: new Set(), cache: {},
   sr: [], srP: 0, srF: [], hcOn: false, hcX: false, grpQ: '', ctrlHover: false,
-  allValidated: null
+  allValidated: null,
+  picks: new Set()
 };
 var PG = 50;
 
@@ -640,9 +642,10 @@ async function init() {
   try {
     var responses = await Promise.all([
       fetch('data/curated.json'),
-      fetch('data/channels.json')
+      fetch('data/channels.json'),
+      fetch('data/picks.json')
     ]);
-    var curatedRes = responses[0], channelsRes = responses[1];
+    var curatedRes = responses[0], channelsRes = responses[1], picksRes = responses[2];
     if (curatedRes.ok && channelsRes.ok) {
       var curated = await curatedRes.json();
       var allChannels = await channelsRes.json();
@@ -664,6 +667,10 @@ async function init() {
         S.allValidated = allChannels;
         loaded = true;
       }
+      if (picksRes.ok) {
+        var picksData = await picksRes.json();
+        S.picks = new Set(picksData.channels.map(function(c) { return c.url; }));
+      }
     }
   } catch (e) {
     console.log('Failed to load channel data, using built-in list:', e);
@@ -674,6 +681,7 @@ async function init() {
     });
     S.allValidated = null;
   }
+  S.tab = 'picks';
   S.urls = new Set(S.chs.map(function(c) { return c.url; }));
   ref();
   var brsEl = document.getElementById('brs');
@@ -757,6 +765,7 @@ function rF() {
 
 function ref() {
   var c = S.chs;
+  if (S.tab === 'picks') c = c.filter(function(x) { return S.picks.has(x.url); });
   if (S.tab === 'fav') c = c.filter(function(x) { return S.favs.has(x.id); });
   if (S.tab === 'live') c = c.filter(function(x) { return x.status === 'ok'; });
   if (S.grp !== 'all') c = c.filter(function(x) { return x.group === S.grp; });
@@ -768,7 +777,7 @@ function ref() {
 function setTab(t) {
   S.tab = t; S.grp = 'all'; S.fi = 0;
   document.querySelectorAll('.tab').forEach(function(b, i) {
-    b.classList.toggle('on', (i === 0 && t === 'all') || (i === 1 && t === 'fav') || (i === 2 && t === 'live'));
+    b.classList.toggle('on', (i === 0 && t === 'picks') || (i === 1 && t === 'all') || (i === 2 && t === 'fav') || (i === 3 && t === 'live'));
   });
   ref();
 }
