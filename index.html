@@ -525,7 +525,8 @@ var S = {
   chs: [], fil: [], fi: 0, pid: -1, tab: 'all', grp: 'all',
   favs: new Set(JSON.parse(localStorage.getItem('lounge-tv-favs') || '[]')),
   hls: null, hlsP: null, urls: new Set(), cache: {},
-  sr: [], srP: 0, srF: [], hcOn: false, hcX: false, grpQ: '', ctrlHover: false
+  sr: [], srP: 0, srF: [], hcOn: false, hcX: false, grpQ: '', ctrlHover: false,
+  allValidated: null
 };
 var PG = 50;
 
@@ -558,6 +559,7 @@ var BUILT = [
 ];
 
 var BRW = [
+  {k:'_validated',l:'\u2705 Validated',u:'_local'},
   {k:'es',l:'\u{1F1EA}\u{1F1F8} Spain',u:'https://iptv-org.github.io/iptv/countries/es.m3u'},
   {k:'gb',l:'\u{1F1EC}\u{1F1E7} UK',u:'https://iptv-org.github.io/iptv/countries/uk.m3u'},
   {k:'us',l:'\u{1F1FA}\u{1F1F8} USA',u:'https://iptv-org.github.io/iptv/countries/us.m3u'},
@@ -633,13 +635,57 @@ function resetHcBtn() {
   btn.textContent = '\u{1FA7A} Check visible'; btn.classList.remove('run');
 }
 
-function init() {
-  S.chs = BUILT.map(function(c, i) { return {name: c.name, group: c.group, url: c.url, logo: c.logo || '', id: i, status: 'unk'}; });
+async function init() {
+  var loaded = false;
+  try {
+    var responses = await Promise.all([
+      fetch('data/curated.json'),
+      fetch('data/channels.json')
+    ]);
+    var curatedRes = responses[0], channelsRes = responses[1];
+    if (curatedRes.ok && channelsRes.ok) {
+      var curated = await curatedRes.json();
+      var allChannels = await channelsRes.json();
+      var channelMap = {};
+      allChannels.forEach(function(c) { channelMap[c.url] = c; });
+      var chs = [];
+      curated.channels.forEach(function(entry) {
+        var ch = channelMap[entry.url];
+        if (ch) {
+          chs.push({
+            name: ch.name, group: ch.group, url: ch.url,
+            logo: ch.logo || '', status: ch.status || 'unk',
+            id: chs.length
+          });
+        }
+      });
+      if (chs.length > 0) {
+        S.chs = chs;
+        S.allValidated = allChannels;
+        loaded = true;
+      }
+    }
+  } catch (e) {
+    console.log('Failed to load channel data, using built-in list:', e);
+  }
+  if (!loaded) {
+    S.chs = BUILT.map(function(c, i) {
+      return {name: c.name, group: c.group, url: c.url, logo: c.logo || '', id: i, status: 'unk'};
+    });
+    S.allValidated = null;
+  }
   S.urls = new Set(S.chs.map(function(c) { return c.url; }));
   ref();
-  document.getElementById('brs').innerHTML = BRW.map(function(b) {
-    return '<div class="br" data-k="' + b.k + '" onclick="pick(\'' + b.k + '\')">' + b.l + '</div>';
-  }).join('');
+  var brsEl = document.getElementById('brs');
+  brsEl.innerHTML = '';
+  BRW.forEach(function(b) {
+    var div = document.createElement('div');
+    div.className = 'br';
+    div.dataset.k = b.k;
+    div.textContent = b.l;
+    div.onclick = function() { pick(b.k); };
+    brsEl.appendChild(div);
+  });
   if (window.innerWidth <= 900) { document.getElementById('side').classList.add('closed'); updMB(); }
   var v = document.getElementById('vid');
   v.addEventListener('timeupdate', function() {
@@ -650,7 +696,7 @@ function init() {
   });
   v.addEventListener('playing', function() { document.getElementById('bPl').textContent = '\u23F8'; });
   v.addEventListener('pause', function() { document.getElementById('bPl').textContent = '\u25B6'; });
-  tst(S.chs.length + ' curated channels loaded. Use \u{1F50D} Find to browse more.', 'ok');
+  tst(S.chs.length + ' curated channels loaded.' + (S.allValidated ? '' : ' (offline mode)'), 'ok');
 }
 
 function exportM3U() {
@@ -968,8 +1014,18 @@ function closeSearch() { document.getElementById('srch').classList.remove('open'
 async function pick(k) {
   document.querySelectorAll('.br').forEach(function(b) { b.classList.toggle('on', b.dataset.k === k); });
   S.srP = 0;
+  if (k === '_validated') {
+    if (!S.allValidated) {
+      document.getElementById('srl').textContent = 'No validation data available. Run the validation script first.';
+      return;
+    }
+    var okChannels = S.allValidated.filter(function(c) { return c.status === 'ok'; });
+    S.sr = okChannels; S.cache[k] = okChannels;
+    document.getElementById('src').textContent = ' \u2014 ' + okChannels.length + ' working';
+    fltSR(); return;
+  }
   if (S.cache[k]) { S.sr = S.cache[k]; document.getElementById('src').textContent = ' \u2014 ' + S.sr.length; fltSR(); return; }
-  document.getElementById('srl').innerHTML = '<div class="sr-ld"><div class="sp"></div> Loading...</div>';
+  document.getElementById('srl').textContent = 'Loading...';
   var item = BRW.find(function(b) { return b.k === k; });
   if (!item) return;
   try {

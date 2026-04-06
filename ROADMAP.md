@@ -6,7 +6,11 @@ The player works in any browser. 25 curated free-to-air channels load instantly 
 
 Delivered: HLS playback via HLS.js, collapsible sidebar with channel list, group filters, favourites (localStorage), health checker, IPTV directory browser with country/category/language search, M3U import/export, PiP preview, keyboard navigation, responsive dark theme, GitHub Pages deployment.
 
-## Phase 1.5: LG webOS deployment investigation [NEXT]
+## Phase 1.1: Curated channels with automated validation [DONE]
+
+Replaced the 25-channel baked-in list with a curated selection of ~50 reliably working channels, primarily UK-focused with international news, music, entertainment, and sports. A Node.js validation script tests streams from iptv-org playlists and writes results to data/channels.json. A hand-edited data/curated.json defines the curated picks. A GitHub Action runs validation weekly and commits updated results. The app loads both JSON files on startup, falling back to the built-in list if offline. The Find panel includes a "Validated" filter showing all working channels from the last validation run as a discovery pool.
+
+## Phase 1.5: LG webOS deployment investigation
 
 Before building a proxy backend, validate that the webOS deployment path is viable and worth pursuing.
 
