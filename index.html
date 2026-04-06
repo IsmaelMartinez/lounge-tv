@@ -1076,7 +1076,14 @@ function rSR() {
 function addC(n, g, u, l) {
   if (S.urls.has(u)) return;
   var ch = {name: n, group: g, url: u, logo: l || '', id: S.chs.length, status: 'unk'};
-  S.chs.push(ch); addUrl(u); ref(); rSR(); tst(n + ' added', 'ok');
+  S.chs.push(ch); addUrl(u);
+  S.tab = 'all'; S.grp = 'all';
+  document.querySelectorAll('.tab').forEach(function(b, i) { b.classList.toggle('on', i === 0); });
+  ref();
+  // Scroll to the new channel
+  var idx = S.fil.findIndex(function(c) { return c.url === u; });
+  if (idx >= 0) { S.fi = idx; rL(); }
+  rSR(); tst(n + ' added', 'ok');
 }
 
 function addAllSR() {
