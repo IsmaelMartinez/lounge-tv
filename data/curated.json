@@ -1,16 +1,7 @@
 {
   "channels": [
     {
-      "url": "https://live-talktv-ssai.simplestreamcdn.com/v1/master/774d979dd66704abea7c5b62cb34c6815fda0d35/talktv-live/index.m3u8"
-    },
-    {
       "url": "https://distro001-gb-hls1-prd.delivery.skycdp.com/easel_cdn/ngrp:weather_loop.stream_all/playlist.m3u8"
-    },
-    {
-      "url": "https://d1bl6tskrpq9ze.cloudfront.net/hls/master.m3u8?ads.xumo_channelId=99984003"
-    },
-    {
-      "url": "https://vs-cmaf-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/iptv_mse_v0_hevc.mpd"
     },
     {
       "url": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8"
@@ -20,9 +11,6 @@
     },
     {
       "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8"
-    },
-    {
-      "url": "https://7060743b4b224241b86325460b14d152.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6769/bitok/eyJzdGlkIjoiMTE3OTllNGEtYmU1OC00ZjQyLTkxOTYtY2VlYWQzZGU2MDJjIiwibWt0IjoicGwiLCJjaCI6Njc2OSwicHRmIjo1fQ==/26235/euronews-pl.m3u8"
     },
     {
       "url": "https://abc-news-dmd-streams-1.akamaized.net/out/v1/701126012d044971b3fa89406a440133/index.m3u8"
@@ -64,22 +52,10 @@
       "url": "https://amg01753-narrativeuk-amg01753c2-lg-gb-1832.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-greatchristmas-lggb/playlist.m3u8"
     },
     {
-      "url": "https://0145451975a64b35866170fd2e8fa486.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-5987/master.m3u8"
-    },
-    {
-      "url": "https://54045f0c40fd442c8b06df076aaf1e85.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6065/master.m3u8"
-    },
-    {
-      "url": "https://9be783d652cd4b099cf63e1dc134c4a3.mediatailor.eu-west-1.amazonaws.com/v1/master/0547f18649bd788bec7b67b746e47670f558b6b2/production-LiveChannel-6181/master.m3u8"
-    },
-    {
       "url": "https://moviesphereuk-samsunguk.amagi.tv/playlist.m3u8"
     },
     {
       "url": "https://discoverfilm-discoverfilm-1-nl.samsung.wurl.tv/playlist.m3u8"
-    },
-    {
-      "url": "https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8"
     },
     {
       "url": "https://stream.ecable.tv/afrobeats/index.m3u8"
@@ -89,15 +65,6 @@
     },
     {
       "url": "https://samsungau-qwestjazz-samsungtv-zw2jc.amagi.tv/playlist/samsungau-qwestjazz-samsungtv/playlist.m3u8"
-    },
-    {
-      "url": "https://1a3566cb46914c5499fbc86fbc4ac87e.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-932-WORBUKENFAST-WHALETVPLUS/932/whaletvplus/hls/master/playlist.m3u8"
-    },
-    {
-      "url": "https://a62dad94.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM/playlist.m3u8"
-    },
-    {
-      "url": "https://af7a8b4e.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfdGFsa1NQT1JUX0hMUw/playlist.m3u8"
     },
     {
       "url": "https://hnc-free-viewlift.amagi.tv/HNC_AUSTRALIA.m3u8"
@@ -115,22 +82,10 @@
       "url": "https://amg01753-narrativeuk-amg01753c1-lg-gb-1830.playouts.now.amagi.tv/playlist/amg01753-narrativeuk-tinypop-lggb/playlist.m3u8"
     },
     {
-      "url": "https://a57e9c69976649b582a8d7604c00e69a.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AdventureEarth/playlist.m3u8"
-    },
-    {
       "url": "https://amg01775-amg01775c1-amgplt0343.playout.now3.amagi.tv/playlist/amg01775-amg01775c1-amgplt0343/playlist.m3u8"
     },
     {
-      "url": "https://lds-wonder-rakuten.amagi.tv/playlist.m3u8"
-    },
-    {
-      "url": "https://9e754fa707344ccca6d84955c8fcaf36.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/RlaxxTV-eu_AutenticHistory/playlist.m3u8"
-    },
-    {
       "url": "https://aenetworks-mysterytv-rakuten.amagi.tv/playlist.m3u8"
-    },
-    {
-      "url": "https://tastemade-tdint-rakuten.amagi.tv/playlist.m3u8"
     },
     {
       "url": "https://lo3.gemporia.com/abrhobbymakerukgfx/smil:livestreamFullHD.smil/playlist.m3u8"
@@ -139,7 +94,58 @@
       "url": "http://c3921155.edmonst.net/iptv/65C7UBRRW8GHQVYPH2MQT3SA/15171/index.m3u8"
     },
     {
-      "url": "https://86fdc85a.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/TEctZ2JfQmxvb21iZXJnT3JpZ2luYWxzX0hMUw/playlist.m3u8"
+      "url": "https://abcnews-streams.akamaized.net/hls/live/2023560/abcnewshudson1/master_4000.m3u8"
+    },
+    {
+      "url": "https://d2ah48mnofquik.cloudfront.net/Backstage.m3u8"
+    },
+    {
+      "url": "https://liveovh010.cda.pl/zkr7GNESGht4_0Wk12c78A/17538736/2782059/enc126/bbcearthhdraw/bbcearthhdraw.m3u8"
+    },
+    {
+      "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8"
+    },
+    {
+      "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-courttv-tablo/playlist.m3u8"
+    },
+    {
+      "url": "https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://d3b6q2ou5kp8ke.cloudfront.net/ESPNTheOcho.m3u8"
+    },
+    {
+      "url": "https://dazn-combat-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-dazn-combat-rakuten/CDN/master.m3u8"
+    },
+    {
+      "url": "https://raycom-accdn-firetv.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://cmc-ono.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://livechannel.mdc.akamaized.net/stitch/livechannel/1341/master1400000.m3u8;session=live_stream_1341"
+    },
+    {
+      "url": "https://newidco-babysharktv-1-us.roku.wurl.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://dmr1h4skdal9h.cloudfront.net/playlist.m3u8"
+    },
+    {
+      "url": "https://dil9xdvretp0f.cloudfront.net/index.m3u8"
+    },
+    {
+      "url": "https://lightning-fnf-samsungaus.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://buzzrota-ono.amagi.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://amc-absolutereality-1-us.plex.wurl.tv/playlist.m3u8"
+    },
+    {
+      "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-bouncexl-tablo/playlist.m3u8"
     }
   ]
 }
