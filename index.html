@@ -741,22 +741,23 @@ function togS() {
 }
 function updMB() { document.getElementById('mb').style.display = document.getElementById('side').classList.contains('closed') ? 'block' : 'none'; }
 
-function grps() {
+function grps(list) {
   var counts = {};
-  S.chs.forEach(function(c) { counts[c.group] = (counts[c.group] || 0) + 1; });
+  list.forEach(function(c) { counts[c.group] = (counts[c.group] || 0) + 1; });
   return Object.entries(counts).sort(function(a, b) { return b[1] - a[1]; }).map(function(e) { return {g: e[0], n: e[1]}; });
 }
 
-function rF() {
-  var all = grps();
+function rF(tabFiltered) {
+  var all = grps(tabFiltered);
+  var total = tabFiltered.length;
   var q = (S.grpQ || '').toLowerCase();
   var filtered = q ? all.filter(function(x) { return x.g.toLowerCase().indexOf(q) >= 0; }) : all;
   var show = filtered.slice(0, 30);
   var more = filtered.length > 30 ? filtered.length - 30 : 0;
   var el = document.getElementById('flts');
   el.innerHTML =
-    '<input class="fl-search" id="gq" placeholder="\u{1F50D} Filter groups..." value="' + (S.grpQ || '') + '" oninput="S.grpQ=this.value;rF();">' +
-    '<div class="fl ' + (S.grp === 'all' ? 'on' : '') + '" onclick="sgrp(\'all\')">All (' + S.chs.length + ')</div>' +
+    '<input class="fl-search" id="gq" placeholder="\u{1F50D} Filter groups..." value="' + (S.grpQ || '') + '" oninput="S.grpQ=this.value;ref();">' +
+    '<div class="fl ' + (S.grp === 'all' ? 'on' : '') + '" onclick="sgrp(\'all\')">All (' + total + ')</div>' +
     show.map(function(x) {
       return '<div class="fl ' + (x.g === S.grp ? 'on' : '') + '" onclick="sgrp(\'' + x.g.replace(/'/g, "\\'") + '\')">' + x.g + ' (' + x.n + ')</div>';
     }).join('') +
@@ -768,10 +769,11 @@ function ref() {
   if (S.tab === 'picks') c = c.filter(function(x) { return S.picks.has(x.url); });
   if (S.tab === 'fav') c = c.filter(function(x) { return S.favs.has(x.id); });
   if (S.tab === 'live') c = c.filter(function(x) { return x.status === 'ok'; });
+  var tabFiltered = c;
   if (S.grp !== 'all') c = c.filter(function(x) { return x.group === S.grp; });
   S.fil = c;
   if (S.fi >= S.fil.length) S.fi = Math.max(0, S.fil.length - 1);
-  rF(); rL();
+  rF(tabFiltered); rL();
 }
 
 function setTab(t) {

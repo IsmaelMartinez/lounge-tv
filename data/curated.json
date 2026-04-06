@@ -4,13 +4,7 @@
       "url": "https://abcnews-streams.akamaized.net/hls/live/2023569/abcnewshudson10/master_4000.m3u8"
     },
     {
-      "url": "http://69.64.57.208/burkinainfo/index.m3u8"
-    },
-    {
       "url": "https://amg01821-lovetv-amg01821c27-lg-es-6726.playouts.now.amagi.tv/playlist/amg01821-lovetvfast-lovenews-lges/playlist.m3u8"
-    },
-    {
-      "url": "https://cdn-euronews.akamaized.net/live/eds/africanews-fr/25050/index.m3u8"
     },
     {
       "url": "https://hls.afintl.com/hls/stream.m3u8"
@@ -58,16 +52,10 @@
       "url": "https://live-hls-apps-aja-fa.getaj.net/AJA/01.m3u8"
     },
     {
-      "url": "https://mdnlv.cdn.octivid.com/almdn/smil:mpegts.stream.smil/playlist.m3u8"
-    },
-    {
       "url": "https://hlspackager.akamaized.net/live/DB/ALYAUM_TV/HLS/ALYAUM_TV.m3u8"
     },
     {
       "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-al-ekhbaria/297b3ef1cd0633ad9cfba7473a686a06/index.m3u8"
-    },
-    {
-      "url": "https://live2.cdnbridge.tv/AlmasirahMubasher/Mubasher_All/playlist.m3u8"
     },
     {
       "url": "https://live.cdnbridge.tv/Almasirah/Almasirah_all/playlist.m3u8"
@@ -100,9 +88,6 @@
       "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/main/myvideo-az/arb-24.m3u8"
     },
     {
-      "url": "https://edge.fastpublish.me/live/index.m3u8"
-    },
-    {
       "url": "https://raw.githubusercontent.com/UzunMuhalefet/streams/refs/heads/main/myvideo-az/baku-tv.m3u8"
     },
     {
@@ -124,19 +109,10 @@
       "url": "https://mn-nl.mncdn.com/halabtoday/livestream/index.m3u8"
     },
     {
-      "url": "https://itv.streams.ovh/ALEERT/ALEERT/playlist.m3u8"
-    },
-    {
       "url": "https://stream-aleph.m.ro/Aleph/ngrp:Alephnewsmain.stream_all/playlist.m3u8"
     },
     {
       "url": "https://streaming.najah.edu:8443/hls/AlNajah.m3u8"
-    },
-    {
-      "url": "https://starmenajo.com/hls/almahriah/index.m3u8"
-    },
-    {
-      "url": "https://starmenajo.com/hls/almasar/index.m3u8"
     },
     {
       "url": "https://dash3.antik.sk/live/test_arirang/playlist.m3u8"
@@ -154,9 +130,6 @@
       "url": "https://blacknewschannel-xumo-us.amagi.tv/playlist.m3u8"
     },
     {
-      "url": "http://118.107.85.4:1935/live/smil:DNTV1.smil/chunklist.m3u8"
-    },
-    {
       "url": "https://content.uplynk.com/channel/26bd482ffe364a1282bc3df28bd3c21f.m3u8"
     },
     {
@@ -167,9 +140,6 @@
     },
     {
       "url": "https://livefta.malimarcdn.com/ftaedge00/briantv.sdp/playlist.m3u8"
-    },
-    {
-      "url": "https://viamotionhsi.netplus.ch/live/eds/euronews/browser-HLS8/euronews.m3u8"
     },
     {
       "url": "https://svs.itworkscdn.net/asharqradiovlive/asharqradiov/playlist.m3u8"
@@ -208,9 +178,6 @@
       "url": "https://bozztv.com/hwotta/playlist/playlist.m3u8"
     },
     {
-      "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/lemedia.m3u8"
-    },
-    {
       "url": "https://itv.streams.ovh:1936/corfuchannel/corfuchannel/playlist.m3u8"
     },
     {
@@ -235,9 +202,6 @@
       "url": "https://cbsn-mia.cbsnstream.cbsnews.com/out/v1/ac174b7938264d24ae27e56f6584bca0/master.m3u8"
     },
     {
-      "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/lyoncapitale.m3u8"
-    },
-    {
       "url": "https://account19.livebox.co.in/Anandabarta2hls/live.m3u8"
     },
     {
@@ -245,9 +209,6 @@
     },
     {
       "url": "https://amg01314-cgtn-amg01314c2-rakuten-us-1319.playouts.now.amagi.tv/cgtn-fr-rakuten/playlist.m3u8"
-    },
-    {
-      "url": "https://live.channel8.com/Channel8-Kurdish/index.fmp4.m3u8"
     },
     {
       "url": "https://beritasatu.secureswiftcontent.com/han/beritasatu/bsatu10008/srtoutput/manifest.m3u8"
@@ -283,9 +244,6 @@
       "url": "https://citynewsregional.akamaized.net/hls/live/1024052/Regional_Live_7/master.m3u8"
     },
     {
-      "url": "https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/master.m3u8"
-    },
-    {
       "url": "https://live1.mediadesk.al/cnatvlive.m3u8"
     },
     {
@@ -310,9 +268,6 @@
       "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8"
     },
     {
-      "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/eea48c6b61074052a2fa8532ff795ff1/index.m3u8"
-    },
-    {
       "url": "https://v2.tustreaming.cl/atacamanoticias/index.m3u8"
     },
     {
@@ -326,9 +281,6 @@
     },
     {
       "url": "https://imob.dunyanews.tv/livehd/ngrp:dunyalivehd_2_all/playlist.m3u8"
-    },
-    {
-      "url": "https://arabic-livews.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8"
     },
     {
       "url": "https://reflect-stream-bronxnet.cablecast.tv/live-8/live/stream-4/live.m3u8"
@@ -346,9 +298,6 @@
       "url": "https://cdn0-03837-liveedge0.dna.ip-only.net/03837-liveedge0/smil:03837-tx2/playlist.m3u8"
     },
     {
-      "url": "https://dwamdstream110.akamaized.net/hls/live/2017971/dwstream110/master.m3u8"
-    },
-    {
       "url": "https://aegis-cloudfront-1.tubi.video/5d314174-0110-42af-8811-feaae073ea1e/playlist.m3u8"
     },
     {
@@ -356,9 +305,6 @@
     },
     {
       "url": "http://cdn19.live247stream.com/channely/tv/playlist.m3u8"
-    },
-    {
-      "url": "https://segment.yuppcdn.net/240122/news7/playlist.m3u8"
     },
     {
       "url": "https://live.dottotv.ro/index.m3u8"
@@ -382,28 +328,7 @@
       "url": "https://5db313b643fd8.streamlock.net/MinformoTV/MinformoTV/playlist.m3u8"
     },
     {
-      "url": "https://video.streams.ovh:1936/egnatiatv/egnatiatv/index.m3u8"
-    },
-    {
-      "url": "https://mumt01.tangotv.in/HARKHABAR/index.m3u8"
-    },
-    {
-      "url": "https://jk3lz82elw79-hls-live.5centscdn.com/newgeonews/07811dc6c422334ce36a09ff5cd6fe71.sdp/playlist.m3u8"
-    },
-    {
-      "url": "https://idvd.multitvsolution.com/idvo/bharatsamachar.m3u8"
-    },
-    {
-      "url": "https://cdn-2.pishow.tv/live/1041/master.m3u8"
-    },
-    {
-      "url": "https://mumt01.tangotv.in/APN/index.m3u8"
-    },
-    {
       "url": "https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8"
-    },
-    {
-      "url": "https://cdn-2.pishow.tv/live/1463/master.m3u8"
     },
     {
       "url": "https://cdn-2.pishow.tv/live/425/master.m3u8"
@@ -418,9 +343,6 @@
       "url": "https://gjirafa-video-live.gjirafa.net/gjvideo-livestream/lj9-pxm-o53-rp0/tracks-v4a1/mono.m3u8"
     },
     {
-      "url": "https://mumt01.tangotv.in/INH24X7/index.m3u8"
-    },
-    {
       "url": "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8"
     },
     {
@@ -428,9 +350,6 @@
     },
     {
       "url": "https://estrella-news-oando.amagi.tv/playlist.m3u8"
-    },
-    {
-      "url": "https://media.streambrothers.com:1936/8276/8276/playlist.m3u8"
     },
     {
       "url": "https://dash4.antik.sk/live/test_euronews/playlist.m3u8"
@@ -442,13 +361,7 @@
       "url": "http://41.205.93.154/MSNBC/index.m3u8"
     },
     {
-      "url": "https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8"
-    },
-    {
       "url": "https://stream.arcast.com.ar/canal7catamarca/ngrp:canal7catamarca_all/playlist.m3u8?DVR="
-    },
-    {
-      "url": "https://mumt01.tangotv.in/MNADU/index.m3u8"
     },
     {
       "url": "https://live-stream.dvb.no/hls/stream_src/index.m3u8"
@@ -469,31 +382,13 @@
       "url": "https://live1.mediadesk.al/oranews.m3u8"
     },
     {
-      "url": "https://live.france24.com/hls/live/2037222-b/F24_AR_HI_HLS/master_5000.m3u8"
-    },
-    {
-      "url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8"
-    },
-    {
-      "url": "https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8"
-    },
-    {
       "url": "https://c4635.cdn.xsg.ge/c4635/TVFormula/index.m3u8"
-    },
-    {
-      "url": "https://mumt04.tangotv.in/KHABARFAST/index.m3u8"
     },
     {
       "url": "https://live.france24.com/hls/live/2037220-b/F24_ES_HI_HLS/master_5000.m3u8"
     },
     {
       "url": "https://cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/index.m3u8"
-    },
-    {
-      "url": "https://mumt04.tangotv.in/INDIAVOICE/index.m3u8"
-    },
-    {
-      "url": "https://mumt04.tangotv.in/DY365/index.m3u8"
     },
     {
       "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/6cd2f649739a45ca9de1daf81cc7d0f2/index.m3u8"
@@ -508,16 +403,7 @@
       "url": "https://bozztv.com/rongo/rongo-News24HD/index.m3u8"
     },
     {
-      "url": "https://mumt04.tangotv.in/CVRNEWS/index.m3u8"
-    },
-    {
-      "url": "https://mumt04.tangotv.in/DDNEWS/index.m3u8"
-    },
-    {
       "url": "https://espanol-livews.cgtn.com/hls/LSveOGBaBw41Ea7ukkVAUdKQ220802LSTexu6xAuFH8VZNBLE1ZNEa220802cd/playlist.m3u8"
-    },
-    {
-      "url": "https://segment.yuppcdn.net/240122/puthiya/playlist.m3u8"
     },
     {
       "url": "https://live.artidijitalmedya.com/artidijital_olayturk/olayturk/playlist.m3u8"
@@ -527,12 +413,6 @@
     },
     {
       "url": "https://yayin30.haber100.com/live/finansturk/playlist.m3u8"
-    },
-    {
-      "url": "https://highmedia.livebox.co.in/HIGHNEWShls/LIVE.m3u8"
-    },
-    {
-      "url": "https://mumt04.tangotv.in/MHONENEWS/index.m3u8"
     },
     {
       "url": "https://edge1.lifestreamcdn.com/live/geb/playlist.m3u8"
@@ -557,9 +437,6 @@
     },
     {
       "url": "https://radiovid.foxnews.com/hls/live/661547/RADIOVID/index.m3u8"
-    },
-    {
-      "url": "https://segment.yuppcdn.net/050522/reporter/playlist.m3u8"
     },
     {
       "url": "https://ztnr.rtve.es/ztnr/5473142.m3u8"
@@ -619,9 +496,6 @@
       "url": "https://fox.hostlagarto.com:8081/hmtv/index.m3u8"
     },
     {
-      "url": "https://mumt04.tangotv.in/RAJNEWSMALAYALAM/index.m3u8"
-    },
-    {
       "url": "https://stream-live.lrt.lt/radijas/master.m3u8"
     },
     {
@@ -637,9 +511,6 @@
       "url": "https://vodzong.mjunoon.tv:8087/streamtest/NEWS1-128/playlist.m3u8"
     },
     {
-      "url": "https://mumt04.tangotv.in/RAJNEWSTELUGU/index.m3u8"
-    },
-    {
       "url": "http://streaming-android.freshnewsasia.tv:1935/live/ngrp:myStream_all/playlist.m3u8"
     },
     {
@@ -653,9 +524,6 @@
     },
     {
       "url": "https://video.primexsports.com/suchnews/live/playlist.m3u8"
-    },
-    {
-      "url": "https://vodzong.mjunoon.tv:8087/streamtest/KTNNews-151/playlist.m3u8"
     },
     {
       "url": "https://vcdn.dunyanews.tv/lahorelive/ngrp:lnews_1_all/playlist.m3u8"
@@ -677,9 +545,6 @@
     },
     {
       "url": "https://server.livelegitpro.in/samaykolkata/samaykolkata/index.m3u8"
-    },
-    {
-      "url": "https://mumt04.tangotv.in/SACHBEDHADAK/index.m3u8"
     },
     {
       "url": "https://live.kwikmotion.com/syriatvlive/syriatv.smil/playlist_dvr.m3u8"
@@ -706,9 +571,6 @@
       "url": "https://amg17596-ntdtv-amg17596c1-rakuten-gb-6741.playouts.now.amagi.tv/playlist/amg17596-newtangdynastytelevision-ntdtv-rakutengb/playlist.m3u8"
     },
     {
-      "url": "https://mumt03.tangotv.in/RAJNEWSKANDA/index.m3u8"
-    },
-    {
       "url": "https://stream-hls.castr.net/64490fcefe045f1b63012886/live_22d9a1f0c69c11ee9441219c2cc6d61f/index.fmp4.m3u8"
     },
     {
@@ -721,13 +583,7 @@
       "url": "https://streamer2.nexgen.bz/01-LOVE/index.m3u8"
     },
     {
-      "url": "https://mumt03.tangotv.in/1STINDIANEWS/index.m3u8"
-    },
-    {
       "url": "https://stream.logichost.in/kannurvision/live/playlist.m3u8"
-    },
-    {
-      "url": "http://tv.balkanweb.com:8081/news24/livestream/playlist.m3u8"
     },
     {
       "url": "https://vidcdn.vidgyor.com/news24-origin/liveabr/playlist.m3u8"
@@ -739,16 +595,10 @@
       "url": "https://live.gulistannews.in/hls/jk.m3u8"
     },
     {
-      "url": "https://server.thelegitpro.in/pratidintime/pratidintime/index.fmp4.m3u8"
-    },
-    {
       "url": "https://amg01076-lightning-amg01076c5-rakuten-us-1788.playouts.now.amagi.tv/playlist/amg01076-lightning-newsworld-rakutenus/playlist.m3u8"
     },
     {
       "url": "https://content.uplynk.com/channel/33c48f602cfd4474b957eb4ad999caf8.m3u8"
-    },
-    {
-      "url": "https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678/ndtv24x7/master.m3u8"
     },
     {
       "url": "https://server.thelegitpro.in/northeastlive/northeastlive/index.fmp4.m3u8"
@@ -772,27 +622,6 @@
       "url": "https://jktglobe.secureswiftcontent.com/han/jktglobe/jktglobe/srtoutput/manifest.m3u8"
     },
     {
-      "url": "https://mumt02.tangotv.in/MATHRUBHUMINEWS/index.m3u8"
-    },
-    {
-      "url": "https://mumt02.tangotv.in/PRIMENEWS/index.m3u8"
-    },
-    {
-      "url": "https://mumt02.tangotv.in/IND24/index.m3u8"
-    },
-    {
-      "url": "https://mumt02.tangotv.in/KNEWSINDIA/index.m3u8"
-    },
-    {
-      "url": "https://mumt03.tangotv.in/SAHANANEWS/index.m3u8"
-    },
-    {
-      "url": "https://mumt02.tangotv.in/MANTAVYA24X7NEWS/index.m3u8"
-    },
-    {
-      "url": "https://ndtvindiaelemarchana.akamaized.net/hls/live/2003679/ndtvindia/master.m3u8"
-    },
-    {
       "url": "http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8"
     },
     {
@@ -802,16 +631,10 @@
       "url": "https://cdn-3.pishow.tv/live/1481/master.m3u8"
     },
     {
-      "url": "https://cdn-3.pishow.tv/live/268/master.m3u8"
-    },
-    {
       "url": "https://play.cdn.enetres.net/621B146D29C541AFB1507809F038F471021/021/playlist.m3u8"
     },
     {
       "url": "https://flv.intechmedia.net/live/ch112.m3u8"
-    },
-    {
-      "url": "https://live20.bozztv.com/akamaissh101/ssh101/rctvhdtra/playlist.m3u8"
     },
     {
       "url": "https://547f72e6652371c3.mediapackage.us-east-1.amazonaws.com/out/v1/e3e6e29095844c4ba7d887f01e44a5ef/index.m3u8"
@@ -829,15 +652,6 @@
       "url": "https://stream.ottlive.co.in/livingindia/index.m3u8"
     },
     {
-      "url": "https://hls.newworldtv.com/nw-info-2/video/live.m3u8"
-    },
-    {
-      "url": "https://hls.newworldtv.com/nw-info/video/live.m3u8"
-    },
-    {
-      "url": "https://cdn-6.pishow.tv/live/10014/master.m3u8"
-    },
-    {
       "url": "https://iptv.mihantv.com/mihantv/playlist.m3u8"
     },
     {
@@ -845,15 +659,6 @@
     },
     {
       "url": "https://streaming2.medi1tv.com/live/smil:medi1tv.smil/playlist.m3u8"
-    },
-    {
-      "url": "https://streaming2.medi1tv.com/live/smil:medi1ar.smil/playlist.m3u8"
-    },
-    {
-      "url": "https://cdn-6.pishow.tv/live/10009/master.m3u8"
-    },
-    {
-      "url": "https://cdn-6.pishow.tv/live/10011/master.m3u8"
     },
     {
       "url": "https://virta2.nopolanews.fi:8443/live/smil:Stream1.smil/playlist.m3u8"
@@ -875,12 +680,6 @@
     },
     {
       "url": "https://cdn-2.pishow.tv/live/465/master.m3u8"
-    },
-    {
-      "url": "https://cdn-3.pishow.tv/live/1476/master.m3u8"
-    },
-    {
-      "url": "https://cdn-3.pishow.tv/live/1465/master.m3u8"
     },
     {
       "url": "https://cdn-3.pishow.tv/live/1279/master.m3u8"
@@ -922,25 +721,13 @@
       "url": "https://cloudvideo.servers10.com:8081/8116/index.m3u8"
     },
     {
-      "url": "https://cloudvideo.servers10.com:8081/8034/index.m3u8"
-    },
-    {
       "url": "https://eu1.servers10.com:8081/8192/index.m3u8"
-    },
-    {
-      "url": "https://mumt01.tangotv.in/STVHARYANANEWS/index.m3u8"
     },
     {
       "url": "https://zn1tf.desdeparaguay.net/nandutitv/nandutitv_alta/playlist.m3u8"
     },
     {
-      "url": "http://69.64.57.208/tvcnews/playlist.m3u8"
-    },
-    {
       "url": "https://live.paltodaytv.com/paltv/live/playlist_sfm4s.m3u8"
-    },
-    {
-      "url": "https://live.paltodaytv.com/paltv/live/playlist.m3u8"
     },
     {
       "url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvraj/master_1.m3u8"
@@ -961,16 +748,10 @@
       "url": "https://unlimited6-cl.dps.live/cm/cm.smil/playlist.m3u8"
     },
     {
-      "url": "https://mumt04.tangotv.in/VISTAARNEWS/index.m3u8"
-    },
-    {
       "url": "https://content.uplynk.com/channel/1f93c13275024afb9e0ead299624073d.m3u8"
     },
     {
       "url": "https://viamotionhsi.netplus.ch/live/eds/n24/browser-HLS8/n24.m3u8"
-    },
-    {
-      "url": "https://videohd.live:19360/8076/8076.m3u8"
     },
     {
       "url": "https://cdn.jmvstream.com/w/LVW-8503/LVW8503_d0V5oduFlK/playlist.m3u8"
@@ -979,13 +760,7 @@
       "url": "https://cdn.jmvstream.com/w/LVW-9591/LVW9591_PmXtgATnaS/playlist.m3u8"
     },
     {
-      "url": "https://mumt01.tangotv.in/JANAMTVTAMIL/index.m3u8"
-    },
-    {
       "url": "https://stream.hrbtv.net/xwzh/playlist.m3u8?_upt=ef41dd531755913594"
-    },
-    {
-      "url": "https://web-ndtv-marathi.akamaized.net/hls/live/2110470/ndtvmarathi/master_1.m3u8"
     },
     {
       "url": "https://sabctretalh.cdn.mangomolo.com/lehae/smil:lehae.stream.smil/master.m3u8"
@@ -1000,19 +775,10 @@
       "url": "https://59d39900ebfb8.streamlock.net/untv-720/untv-720/playlist.m3u8"
     },
     {
-      "url": "https://59d39900ebfb8.streamlock.net/rcv/rcv/playlist.m3u8"
-    },
-    {
       "url": "https://bozztv.com/1gbw5/tintv2/tintv2/playlist.m3u8"
     },
     {
-      "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8"
-    },
-    {
       "url": "https://2-fss-2.streamhoster.com/pl_138/206532-6829902-1/playlist.m3u8"
-    },
-    {
-      "url": "https://live.palitranews.ge/hls/palitratv/index.m3u8"
     },
     {
       "url": "https://amg00453-reuters-amg00453c1-rakuten-uk-2110.playouts.now.amagi.tv/playlist/amg00453-reuters-reuters-rakutenuk/playlist.m3u8"
@@ -1030,22 +796,13 @@
       "url": "https://59a564764e2b6.streamlock.net/palestra/palestra/playlist.m3u8"
     },
     {
-      "url": "https://mumt03.tangotv.in/7SMUSIC/index.m3u8"
-    },
-    {
       "url": "https://sabconetanw.cdn.mangomolo.com/news/smil:news.stream.smil/master.m3u8"
     },
     {
       "url": "https://f5842579ff984c1c98d63b8d789673eb.msvdn.net/live/S27391994/HVvPMzy/playlist.m3u8"
     },
     {
-      "url": "https://vg-republictvlive.akamaized.net/ptnr-republicweb/title-Republic_TV_Kannada/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/1acd1ce1-c6a7-4ae4-afa1-133ffb111ebb/main.m3u8"
-    },
-    {
       "url": "https://live-cf-sathiyamtv.dailyhunt.in/master.m3u8"
-    },
-    {
-      "url": "https://realitatealive.md/tv/rlive.m3u8"
     },
     {
       "url": "https://cloudvideo.servers10.com:8081/8004/index.m3u8"
@@ -1066,9 +823,6 @@
       "url": "https://stream.shams.tv/hls/stream.m3u8"
     },
     {
-      "url": "https://powertvkannada.com/hls/stream.m3u8"
-    },
-    {
       "url": "https://rt-india.rttv.com/dvr/rtindia/playlist.m3u8"
     },
     {
@@ -1084,9 +838,6 @@
       "url": "https://d25tgymtnqzu8s.cloudfront.net/event/smil:event1/chunklist_b2596000_slENG.m3u8"
     },
     {
-      "url": "https://rt-arb.rttv.com/dvr/rtarab/playlist.m3u8"
-    },
-    {
       "url": "https://stream.skynewsarabia.com/vertical/vertical.m3u8"
     },
     {
@@ -1096,16 +847,7 @@
       "url": "https://live20.bozztv.com/giatv/giatv-KMKTV/KMKTV/chunks.m3u8"
     },
     {
-      "url": "https://5dd3981940faa.streamlock.net/onkarentertainment/onkarentertainment/playlist.m3u8"
-    },
-    {
       "url": "https://reflect-communitytv.cablecast.tv/live-5/live/stream-3/live.m3u8"
-    },
-    {
-      "url": "https://cdn-4.pishow.tv/live/1502/master.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/A1/index.m3u8"
     },
     {
       "url": "https://live-stream.skynewsarabia.com/c-horizontal-channel/horizontal-stream/index.m3u8"
@@ -1126,13 +868,7 @@
       "url": "https://canli.tgrthaber.com/tgrt.m3u8"
     },
     {
-      "url": "https://srspsn.live/live/livestream.m3u8"
-    },
-    {
       "url": "https://video1.makrodigital.com/rtu/rtu/chunks.m3u8?nimblesessionid="
-    },
-    {
-      "url": "https://vg-republictvlive.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-456368/main.m3u8"
     },
     {
       "url": "https://cdn-2.pishow.tv/live/415/master.m3u8"
@@ -1150,22 +886,13 @@
       "url": "https://hlive.ktv.go.kr/live/klive_h.stream/playlist.m3u8"
     },
     {
-      "url": "https://live20.bozztv.com/akamaissh101/ssh101/d3tvnet/playlist.m3u8"
-    },
-    {
       "url": "https://d37kx062o4ii0p.cloudfront.net/master.m3u8"
     },
     {
       "url": "https://thefirst-oando.amagi.tv/playlist.m3u8"
     },
     {
-      "url": "https://live.cast-control.eu/StartMedia/StartMedia/playlist.m3u8"
-    },
-    {
       "url": "https://n18syndication.akamaized.net/bpk-tv/News18_Kerala_NW18_MOB/output01/master.m3u8"
-    },
-    {
-      "url": "https://srspsn2.live/live/livestream.m3u8"
     },
     {
       "url": "https://lowa8026-cmyk.github.io/tvpvod/399731.m3u8"
@@ -1175,9 +902,6 @@
     },
     {
       "url": "https://stream8.cinerama.uz/1015/tracks-v1a1/playlist.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/Bridge_TV/index.m3u8"
     },
     {
       "url": "https://video1.getstreamhosting.com:1936/8212/8212/playlist.m3u8"
@@ -1198,34 +922,16 @@
       "url": "http://31.148.48.15/Bridge_TV_HD/index.m3u8"
     },
     {
-      "url": "http://31.148.48.15/Bridge_TV_Classic/index.m3u8"
-    },
-    {
-      "url": "https://n18syndication.akamaized.net/bpk-tv/News18_Tamil_Nadu_NW18_MOB/output01/master.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/Bridge_TV_Dance/index.m3u8"
-    },
-    {
       "url": "https://d2o3r1shda7xvv.cloudfront.net/index_5.m3u8"
     },
     {
-      "url": "https://voa-ingest.akamaized.net/hls/live/2033876/tvmc07/playlist.m3u8"
-    },
-    {
       "url": "http://cdn10.live-tv.od.ua:8081/sk1zt/sk1zt720p/playlist.m3u8"
-    },
-    {
-      "url": "https://n18syndication.akamaized.net/bpk-tv/News18_Urdu_NW18_MOB/output01/master.m3u8"
     },
     {
       "url": "https://tvr-info.lg.mncdn.com/tvrinfo/smil:tvrinfo.smil/chunklist_b5160000.m3u8"
     },
     {
       "url": "https://voa-ingest.akamaized.net/hls/live/2033874/tvmc06/playlist.m3u8"
-    },
-    {
-      "url": "https://skynewsau-live.akamaized.net/hls/live/2002689/skynewsau-extra1/master.m3u8"
     },
     {
       "url": "https://tv-trtarabi.medya.trt.com.tr/master.m3u8"
@@ -1240,12 +946,6 @@
       "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8"
     },
     {
-      "url": "http://178.33.224.197:1935/euroindiemusic/euroindiemusic/playlist.m3u8"
-    },
-    {
-      "url": "http://46.249.95.140:8081/hls/data.m3u8"
-    },
-    {
       "url": "https://stream.badinan.xyz/welat/tv/playlist.m3u8"
     },
     {
@@ -1258,28 +958,16 @@
       "url": "https://d7x8z4yuq42qn.cloudfront.net/index_7.m3u8"
     },
     {
-      "url": "https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9telcmjhcs/liveabr/playlist.m3u8"
-    },
-    {
       "url": "https://n18syndication.akamaized.net/bpk-tv/News18_UP_Uttarakhand_NW18_MOB/output01/master.m3u8"
     },
     {
       "url": "https://lingkartv.my.id/hls/lingkartv.m3u8"
     },
     {
-      "url": "https://mblenmain01.telesur.ultrabase.net/mblivev3/480p/playlist.m3u8"
-    },
-    {
       "url": "https://video1.getstreamhosting.com:1936/8326/8326/playlist.m3u8"
     },
     {
-      "url": "https://mblesmain01.telesur.ultrabase.net/mbliveMain/480p/playlist.m3u8"
-    },
-    {
       "url": "https://n18syndication.akamaized.net/bpk-tv/News18_Assam_North_East_NW18_MOB/output01/master.m3u8"
-    },
-    {
-      "url": "https://stream8.cinerama.uz/1018/playlist.m3u8"
     },
     {
       "url": "https://n18syndication.akamaized.net/bpk-tv/News18_Punjab_Haryana_HP_NW18_MOB/output01/master.m3u8"
@@ -1295,9 +983,6 @@
     },
     {
       "url": "https://n18syndication.akamaized.net/bpk-tv/News18_Lokmat_NW18_MOB/output01/master.m3u8"
-    },
-    {
-      "url": "https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9guj3ki8lu/liveabr/playlist.m3u8"
     },
     {
       "url": "https://edge20.vedge.infomaniak.com/livecast/ik:fusiontv/manifest.m3u8"
@@ -1321,19 +1006,10 @@
       "url": "https://585b674743bbb.streamlock.net/9050/9050/playlist.m3u8"
     },
     {
-      "url": "https://n18syndication.akamaized.net/bpk-tv/News18_Bangla_NW18_MOB/output01/master.m3u8"
-    },
-    {
-      "url": "https://cdnapi.kaltura.com/p/2503451/sp/250345100/playManifest/entryId/1_gb6tjmle/protocol/https/format/applehttp/a.m3u8"
-    },
-    {
       "url": "https://b.jsrdn.com/strm/channels/9xjalwa/master.m3u8"
     },
     {
       "url": "https://eu1.servers10.com:8081/8068/index.m3u8"
-    },
-    {
-      "url": "http://wms.shared.streamshow.it/canale51/canale51/playlist.m3u8"
     },
     {
       "url": "https://video1.getstreamhosting.com:1936/8244/8244/playlist.m3u8"
@@ -1351,9 +1027,6 @@
       "url": "https://ott.livelegitpro.in/sudarshannews/sudarshannews/tracks-v1/index.fmp4.m3u8"
     },
     {
-      "url": "https://n18syndication.akamaized.net/bpk-tv/News18_Gujarati_NW18_MOB/output01/master.m3u8"
-    },
-    {
       "url": "https://n18syndication.akamaized.net/bpk-tv/News18_India_NW18_MOB/output01/master.m3u8"
     },
     {
@@ -1363,16 +1036,7 @@
       "url": "https://amg00327-coxmediagroup-wsocbreaking-plex-t51et.amagi.tv/playlist/amg00327-coxmediagroup-wsocbreaking-plex/playlist.m3u8"
     },
     {
-      "url": "http://80.241.215.175:1935/isangostar/isangostar/playlist.m3u8"
-    },
-    {
-      "url": "https://mumt04.tangotv.in/INSYNC/index.m3u8"
-    },
-    {
       "url": "https://tvjadran.stream.agatin.hr:3412/live/tvjadranlive.m3u8"
-    },
-    {
-      "url": "https://d3vzwoqcbpfm8p.cloudfront.net/index_4.m3u8"
     },
     {
       "url": "https://d2hng5r56zpsbw.cloudfront.net/out/v1/9c4c990f44bb4767bb46271f326dd574/index.m3u8"
@@ -1385,12 +1049,6 @@
     },
     {
       "url": "https://stream.sen-gt.com/A2iMusic/myStream/playlist.m3u8"
-    },
-    {
-      "url": "https://skynewsau-live.akamaized.net/hls/live/2002690/skynewsau-extra2/master.m3u8"
-    },
-    {
-      "url": "https://d116gfrn8orazi.cloudfront.net/index.m3u8?akes=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NjcxOTc5NzJ9.O4qmdMPbHwKrCg6hFXvD70vjSPWKQd0a7NrjmFdeMB8"
     },
     {
       "url": "https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeemadhyachhattisgarh/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/2ab17056-6187-4f0e-a34d-f436ac479d6c/main.m3u8"
@@ -1438,9 +1096,6 @@
       "url": "https://ngtrk.dc.beltelecom.by/ngtrk/smil:informacionnyy.smil/playlist.m3u8"
     },
     {
-      "url": "https://d1ty2af03alkwd.cloudfront.net/index_4.m3u8"
-    },
-    {
       "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00731-gannettcoinc-usatodaynews-plex/playlist.m3u8"
     },
     {
@@ -1451,9 +1106,6 @@
     },
     {
       "url": "http://195.23.211.179:1935/kmusic/smil:kmusic.smil/playlist.m3u8"
-    },
-    {
-      "url": "https://stream.tvkstella.pl/stella/stella.m3u8"
     },
     {
       "url": "http://cdn-01.bonus-tv.ru/kriktv_edge/playlist.m3u8"
@@ -1474,19 +1126,10 @@
       "url": "https://n18syndication.akamaized.net/bpk-tv/News18_Rajasthan_NW18_MOB/output01/master.m3u8"
     },
     {
-      "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/radiokaraoke.m3u8"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/mouv.m3u8"
-    },
-    {
       "url": "https://streaming.televizor-24-tochka.ru/live/27.m3u8"
     },
     {
       "url": "https://live2.tensila.com/pearl-v-1.pearlfm/hls/live/mystream.m3u8"
-    },
-    {
-      "url": "https://n18syndication.akamaized.net/bpk-tv/News18_Kannada_NW18_MOB/output01/master.m3u8"
     },
     {
       "url": "https://live2.tensila.com/cool-v-1.arubara/hls/master.m3u8"
@@ -1531,16 +1174,10 @@
       "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8"
     },
     {
-      "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8"
-    },
-    {
       "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8"
     },
     {
       "url": "https://rtmp.streams.ovh:1936/barazarelax/barazazararelax/barazarelax/playlist.m3u8"
-    },
-    {
-      "url": "https://live.obslivestream.com/makaomux/tracks-v2a1/playlist.m3u8"
     },
     {
       "url": "https://server.zillarbarta.com/zillarbarta/index.m3u8"
@@ -1567,22 +1204,10 @@
       "url": "https://media.streambrothers.com:1936/8014/8014/playlist.m3u8"
     },
     {
-      "url": "https://atomic.streamnet.ro/atomictv.m3u8"
-    },
-    {
-      "url": "https://mumt04.tangotv.in/MHONE/index.m3u8"
-    },
-    {
       "url": "https://dknttpxmr0dwf.cloudfront.net/index_57.m3u8"
     },
     {
       "url": "https://3abn.bozztv.com/3abn1/PraiseHim/smil:PraiseHim.smil/playlist.m3u8"
-    },
-    {
-      "url": "https://live.vipnews24x7.co.in/vipnews24x7/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8"
-    },
-    {
-      "url": "https://atomic.streamnet.ro/academia.m3u8"
     },
     {
       "url": "https://swrdasdingvr-hls.akamaized.net/hls/live/2018681/dasdingvr/master.m3u8"
@@ -1669,19 +1294,10 @@
       "url": "https://d-m-f.iptv-playoutcenter.de/dmf/dmf1/playlist.m3u8"
     },
     {
-      "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/radiokaraoke-2.m3u8"
-    },
-    {
-      "url": "https://video01.logicahost.com.br/tvdopovo1/tvdopovo1/playlist.m3u8"
-    },
-    {
       "url": "https://video01.logicahost.com.br/tvideonews/tvideonews/playlist.m3u8"
     },
     {
       "url": "https://video01.logicahost.com.br/tvafolha/tvafolha/playlist.m3u8"
-    },
-    {
-      "url": "https://eu1.servers10.com:8081/8090/index.m3u8"
     },
     {
       "url": "http://live-tolknews.cdnvideo.ru/tolknews/stream/playlist.m3u8"
@@ -1691,12 +1307,6 @@
     },
     {
       "url": "https://video09.logicahost.com.br/tvparaense/tvparaense/playlist.m3u"
-    },
-    {
-      "url": "https://stream.ottlive.co.in/punjabihits/index.m3u8"
-    },
-    {
-      "url": "https://videostream.shockmedia.com.ar:19360/beatsradio/beatsradio.m3u8"
     },
     {
       "url": "https://58f12ffd2447a.streamlock.net/KKTVNapoli/livestream/playlist.m3u8"
@@ -1714,19 +1324,10 @@
       "url": "https://58f12ffd2447a.streamlock.net/KKMulti/livestream/playlist.m3u8"
     },
     {
-      "url": "https://media.finest.tv/hls/live.m3u8"
-    },
-    {
-      "url": "https://9090video.mobtada.com/hls/stream.m3u8"
-    },
-    {
       "url": "https://stream.fomixmedia.nl/FomixTV/video.m3u8"
     },
     {
       "url": "https://shls-live-enc.edgenextcdn.net/out/v1/bba3ef00b71b470fa955d93a9ca8c277/index.m3u8"
-    },
-    {
-      "url": "https://tv.city.bg/play/tshls/citytv/index.m3u8"
     },
     {
       "url": "https://rp.tactivemedia.com/palestiniantv_source/live/playlist.m3u8"
@@ -1736,9 +1337,6 @@
     },
     {
       "url": "https://video2.makrodigital.com/fmmundo/fmmundo/playlist.m3u8"
-    },
-    {
-      "url": "https://vdo2.pro-fhi.net:3769/stream/play.m3u8"
     },
     {
       "url": "https://streammix.alsolnet.com/hyperadio/live/playlist.m3u8"
@@ -1789,12 +1387,6 @@
       "url": "https://viamotionhsi.netplus.ch/live/eds/mezzo/browser-HLS8/mezzo.m3u8"
     },
     {
-      "url": "https://59d39900ebfb8.streamlock.net/RadioTelehit/RadioTelehit/playlist.m3u8"
-    },
-    {
-      "url": "https://streamtv.intervenhosting.net:3718/live/kandelamedioslive.m3u8"
-    },
-    {
       "url": "https://tv.wracanal10.com:3025/live/elsoltvlive.m3u8"
     },
     {
@@ -1831,9 +1423,6 @@
       "url": "https://video.uitzending.tv:19360/gigantfm/gigantfm.m3u8"
     },
     {
-      "url": "https://giatv.bozztv.com/giatv/giatv-kpoptvplay/kpoptvplay/playlist.m3u8"
-    },
-    {
       "url": "https://5eaccbab48461.streamlock.net:1936/dancefm_1/dancefm_1/playlist.m3u8"
     },
     {
@@ -1855,9 +1444,6 @@
       "url": "https://edge12.vedge.infomaniak.com/livecast/ik:madrasfmtv/manifest.m3u8"
     },
     {
-      "url": "http://31.148.48.15/RU_TV/index.m3u8"
-    },
-    {
       "url": "https://live2.tensila.com/knut-v-1.choice/hls/master.m3u8"
     },
     {
@@ -1867,19 +1453,10 @@
       "url": "https://mumbai-edge.smartplaytv.in/SanaPlusHD/index.m3u8"
     },
     {
-      "url": "https://cdn-4.pishow.tv/live/1499/master.m3u8"
-    },
-    {
       "url": "https://bss1.neterra.tv/thevoice/thevoice.m3u8"
     },
     {
-      "url": "https://m-1.data.lt/m-1/smil:m-1.smil/playlist.m3u8"
-    },
-    {
       "url": "https://cdn.streamingcpanel.com:3784/live/latinzonetvlive.m3u8"
-    },
-    {
-      "url": "https://video.xtrematv.com:3208/live/memoriaslacantinalive.m3u8"
     },
     {
       "url": "https://movil.ejeserver.com/live/masmusica.m3u8"
@@ -1918,9 +1495,6 @@
       "url": "https://cloud.tvomix.com/TVOMIX/index.m3u8"
     },
     {
-      "url": "https://video.xtrematv.com:3401/live/grupomemoriaslive.m3u8"
-    },
-    {
       "url": "https://d2lfa0y84k5bwn.cloudfront.net/out/v1/86dd4506a70c4d7fb35e2ab50296d9a3/index.m3u8"
     },
     {
@@ -1930,40 +1504,19 @@
       "url": "https://backend.energeek.cl/webtv/egradioweb/index.m3u8?token=ZZDemoIPTVGH"
     },
     {
-      "url": "https://video.xtrematv.com:3891/live/memoriaspoplatinolive.m3u8"
-    },
-    {
-      "url": "https://cdn-3.pishow.tv/live/1229/master.m3u8"
-    },
-    {
       "url": "https://5ca3e84a76d30.streamlock.net/tvlobo/videotvlobo/playlist.m3u8"
     },
     {
       "url": "https://playout395.livestreamingcdn.com/live/Stream1/playlist.m3u8"
     },
     {
-      "url": "https://cdn-4.pishow.tv/live/1143/master.m3u8"
-    },
-    {
-      "url": "https://video.xtrematv.com:3576/live/memoriasclassiclive.m3u8"
-    },
-    {
-      "url": "https://video.xtrematv.com:3361/live/memoriastropicallive.m3u8"
-    },
-    {
       "url": "https://streamlov.alsolnet.com/planet1009fm/live/playlist.m3u8"
-    },
-    {
-      "url": "https://mumt04.tangotv.in/RAJMUSIXMALAYALAM/index.m3u8"
     },
     {
       "url": "https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8"
     },
     {
       "url": "https://cc-szivnms4rlah6.akamaized.net/WWBI/Amagi/ETV_Music_IN/playlist.m3u8"
-    },
-    {
-      "url": "https://ocko-live-dash.ssl.cdn.cra.cz/cra_live2/ocko.stream.1.smil/playlist.m3u8"
     },
     {
       "url": "https://cloudvideo.servers10.com:8081/8198/index.m3u8"
@@ -1973,15 +1526,6 @@
     },
     {
       "url": "https://amg01076-amg01076c19-rakuten-gb-8653.playouts.now.amagi.tv/playlist/amg01076-lightning-now90s00s-rakutengb/playlist.m3u8"
-    },
-    {
-      "url": "https://nogoumtv.nrpstream.com/hls/stream.m3u8"
-    },
-    {
-      "url": "https://ocko-live.ssl.cdn.cra.cz/channels/ocko_expres/playlist.m3u8"
-    },
-    {
-      "url": "https://ocko-live.ssl.cdn.cra.cz/channels/ocko_gold/playlist.m3u8"
     },
     {
       "url": "https://d2ow8h651gs7dx.cloudfront.net/out/v1/371fb663da604e659a2fb99bf89d92d4/index.m3u8"
@@ -1999,9 +1543,6 @@
       "url": "https://newidco-newkid-1-eu.xiaomi.wurl.tv/playlist.m3u8"
     },
     {
-      "url": "https://musichls.persiana.live/hls/stream.m3u8"
-    },
-    {
       "url": "https://canadaremar2.todostreaming.es/live/peque-pequetv.m3u8"
     },
     {
@@ -2014,13 +1555,7 @@
       "url": "https://cdn-us-east-prod-ingest-infra-dacast-com.akamaized.net/624ff8f9-db18-da92-4d42-896fa2ff3eb3/source/index.m3u8"
     },
     {
-      "url": "https://sonhls.persiana.live/hls/stream.m3u8"
-    },
-    {
       "url": "https://rpn.bozztv.com/ebstv/ebsmusika/index.m3u8"
-    },
-    {
-      "url": "http://web.onair-radio.eu:1935/Alpha-Host/Alpha-Host/playlist.m3u8"
     },
     {
       "url": "https://vivo.solumedia.com:19360/masfm/masfm.m3u8"
@@ -2044,19 +1579,10 @@
       "url": "https://pmcrohls.wns.live/hls/stream.m3u8"
     },
     {
-      "url": "https://noshls.persiana.live/hls/stream.m3u8"
-    },
-    {
-      "url": "https://mumbai-edge.smartplaytv.in/utv/index.m3u8"
-    },
-    {
       "url": "https://janus.xpbroadcasting.com:8443/hls/popworld.m3u8"
     },
     {
       "url": "https://janus.xpbroadcasting.com:8443/hls/xptv1.m3u8"
-    },
-    {
-      "url": "https://cdn-4.pishow.tv/live/1293/master.m3u8"
     },
     {
       "url": "https://livetv.streams.ovh:1936/paniktv/paniktv/playlist.m3u8"
@@ -2137,9 +1663,6 @@
       "url": "https://59a564764e2b6.streamlock.net/vallenato/vallenatom/playlist.m3u8"
     },
     {
-      "url": "https://videostream.jpbgdigital.com/NOWTV.m3u8"
-    },
-    {
       "url": "https://lotus.stingray.com/manifest/classica-cla008-montreal/samsungtvplus/master.m3u8"
     },
     {
@@ -2152,22 +1675,13 @@
       "url": "https://lotus.stingray.com/manifest/qello-qello001-montreal/samsungtvplus/master.m3u8"
     },
     {
-      "url": "https://yuppnimrestreammum.akamaized.net/181224/smil:songdewtv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
-    },
-    {
       "url": "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8"
-    },
-    {
-      "url": "https://stream.4fun.tv:8888/hls/4f_high/index.m3u8"
     },
     {
       "url": "https://lotus.stingray.com/manifest/ose-021ads-montreal/samsungtvplus/master.m3u8"
     },
     {
       "url": "https://lotus.stingray.com/manifest/ose-102ads-montreal/samsungtvplus/master.m3u8"
-    },
-    {
-      "url": "https://7.innovatestream.pe:19360/turbomixoficial/turbomixoficial.m3u8"
     },
     {
       "url": "https://7.innovatestream.pe:19360/mieltv/mieltv.m3u8"
@@ -2206,16 +1720,10 @@
       "url": "https://mic.siar.us/mic/live/mic.m3u8"
     },
     {
-      "url": "https://mumt01.tangotv.in/RAJMUSIXKANDA/index.m3u8"
-    },
-    {
       "url": "https://eu1.servers10.com:8081/8056/index.m3u8"
     },
     {
       "url": "https://dphwv2ufgnfsq.cloudfront.net/out/v1/59cd80dfe93a479eb8b4d79bc6f225ca/index.m3u8"
-    },
-    {
-      "url": "https://tv.picta.cu/clave/clave_0.m3u8"
     },
     {
       "url": "https://dash4.antik.sk/live/test_arte_avc_25p/playlist.m3u8"
@@ -2225,9 +1733,6 @@
     },
     {
       "url": "https://t2hls.wns.live/hls/stream.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/Zhara/index.m3u8"
     },
     {
       "url": "https://radiojnd.cdn.hostin.cc/radiojnd/playlist.m3u8"
@@ -2251,12 +1756,6 @@
       "url": "https://lotus.stingray.com/manifest/ose-155ads-montreal/samsungtvplus/master.m3u8"
     },
     {
-      "url": "http://31.148.48.15/La-Minor_TV/index.m3u8"
-    },
-    {
-      "url": "https://5857499ee635b.streamlock.net/radiowesertv-live/_definst_/mp4:livestreamTV/playlist.m3u8"
-    },
-    {
       "url": "https://stream.rtl.lu/data/live/tele/rtlgold/playlist.m3u8"
     },
     {
@@ -2278,13 +1777,7 @@
       "url": "https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8"
     },
     {
-      "url": "http://31.148.48.15/2x2/index.m3u8"
-    },
-    {
       "url": "https://lotus.stingray.com/manifest/ose-128ads-montreal/samsungtvplus/master.m3u8"
-    },
-    {
-      "url": "https://streamer103.neterra.tv/tiankov-folk/live.m3u8"
     },
     {
       "url": "https://vcp11.myplaytv.com/powerfm/powerfm/playlist.m3u8"
@@ -2308,25 +1801,16 @@
       "url": "https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8"
     },
     {
-      "url": "https://streamer103.neterra.tv/tiankov-orient/live.m3u8"
-    },
-    {
       "url": "https://stream-13.mazana.tv/slagroriginal.m3u8s"
     },
     {
       "url": "https://eu.live.skyfolk.mk/live.m3u8"
     },
     {
-      "url": "http://176.126.166.43:1935/live/312musik/playlist.m3u8"
-    },
-    {
       "url": "https://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8"
     },
     {
       "url": "https://vdo.pro-fhi.net:3228/stream/play.m3u8"
-    },
-    {
-      "url": "https://stream8.cinerama.uz/1016/tracks-v1a1/mono.m3u8"
     },
     {
       "url": "https://amg01131-tracetv-amg01131c4-stirr-us-4390.playouts.now.amagi.tv/playlist.m3u8"
@@ -2368,9 +1852,6 @@
       "url": "https://edge17.vedge.infomaniak.com/livecast/ik:compack_media_1/playlist.m3u8"
     },
     {
-      "url": "https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8"
-    },
-    {
       "url": "https://cloud37.ecuatel.com/monumentaltv/live/manifest.m3u8"
     },
     {
@@ -2378,9 +1859,6 @@
     },
     {
       "url": "https://movil.ejeserver.com/live/nets.m3u8"
-    },
-    {
-      "url": "https://cdn-1.pishow.tv/live/1213/master.m3u8"
     },
     {
       "url": "https://cdn-1.pishow.tv/live/449/master.m3u8"
@@ -2410,13 +1888,7 @@
       "url": "https://streamunoapp.com:3958/live/cibaenatvlive.m3u8"
     },
     {
-      "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8"
-    },
-    {
       "url": "https://videoserver.tmcreativos.com:19360/radiomaster/radiomaster.m3u8"
-    },
-    {
-      "url": "https://videoserver.tmcreativos.com:19360/raditropical/raditropical.m3u8"
     },
     {
       "url": "https://channels.trace.plus/Traceprod/GOSPEL_FR/.m3u8"
@@ -2464,16 +1936,10 @@
       "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8"
     },
     {
-      "url": "https://cloudvideo.servers10.com:8081/impactotv/index.m3u8"
-    },
-    {
       "url": "https://cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8"
     },
     {
       "url": "https://fffffff110156200.tvustream.com:8298/ryfy.m3u8"
-    },
-    {
-      "url": "https://streaming.grupomediosdelnorte.com:19360/galaxiateve/galaxiateve.m3u8"
     },
     {
       "url": "https://lightning-now90s-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-lightning-now90s-rakuten/CDN/playlist.m3u8"
@@ -2485,22 +1951,13 @@
       "url": "https://d198ro05q94rc4.cloudfront.net/XITE_Rock_On.m3u8"
     },
     {
-      "url": "https://cdn-1.pishow.tv/live/993/master.m3u8"
-    },
-    {
       "url": "https://d3vgs3ro3x6v8a.cloudfront.net/Vevo_Hip_Hop.m3u8"
     },
     {
       "url": "https://vmtv.iptv-playoutcenter.de/vmtv/vmtv1/playlist.m3u8"
     },
     {
-      "url": "https://cdn-6.pishow.tv/live/10002/master.m3u8"
-    },
-    {
       "url": "https://video1.getstreamhosting.com:1936/8152/8152/playlist.m3u8"
-    },
-    {
-      "url": "https://59d39900ebfb8.streamlock.net/FIDELETV/FIDELETV/playlist.m3u8"
     },
     {
       "url": "https://dvnftgdlbnemm.cloudfront.net/XITE_Just_Chill.m3u8"
@@ -2537,9 +1994,6 @@
     },
     {
       "url": "https://d1s6jz7jeei17.cloudfront.net/playlist/amg00056-vevotv-vevo2kau-samsungau/playlist.m3u8"
-    },
-    {
-      "url": "http://103.229.254.25:7001/play/a0ds/index.m3u8"
     },
     {
       "url": "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S9346184/XEx1LqlYbNic/playlist_video.m3u8"
@@ -2584,13 +2038,7 @@
       "url": "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S27134503/0f9AhuwKlhnZ/playlist_video.m3u8"
     },
     {
-      "url": "http://103.229.254.25:7001/play/a077/index.m3u8"
-    },
-    {
       "url": "http://103.229.254.25:7001/play/a0a1/index.m3u8"
-    },
-    {
-      "url": "https://cdn-1.pishow.tv/live/11/master.m3u8"
     },
     {
       "url": "https://songtv.hls.iptvdc.com/web-russia/playlist.m3u8"
@@ -2605,34 +2053,16 @@
       "url": "https://cdn-1.pishow.tv/live/224/master.m3u8"
     },
     {
-      "url": "https://video03.logicahost.com.br/rfptv/rfptv/playlist.m3u8"
-    },
-    {
       "url": "https://d2lyea6if8kkz9.cloudfront.net/playlist/amg00056-vevotv-vevoretrorockau-samsungau/playlist.m3u8"
     },
     {
       "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-drama/2c28a458e2f3253e678b07ac7d13fe71/index.m3u8"
     },
     {
-      "url": "http://k4.usastreams.com/videotour/videotour/playlist.m3u8"
-    },
-    {
-      "url": "http://118.107.85.4:1935/live/smil:DNTV2.smil/chunklist.m3u8"
-    },
-    {
-      "url": "https://eu1.servers10.com:8081/8334/index.m3u8"
-    },
-    {
       "url": "https://00ff00.latnet.media/edge/swh_tv.smil/playlist.m3u8"
     },
     {
       "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-persia/818ee8e4b592dc497608f066d825bfb4/index.m3u8"
-    },
-    {
-      "url": "https://hls-tvsoyuz.cdnvideo.ru/tvsoyuz2/muzsoyuz.6fw0-58xp-acts-esy0/playlist.m3u8"
-    },
-    {
-      "url": "https://mumbai-edge.smartplaytv.in/JayaPLus/index.m3u8"
     },
     {
       "url": "https://lightning-now70s-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-lightning-now70s-rakuten/CDN/playlist.m3u8"
@@ -2686,9 +2116,6 @@
       "url": "https://a-cdn.klowdtv.com/live2/gsn_720p/playlist.m3u8"
     },
     {
-      "url": "https://5ff3d9babae13.streamlock.net/8000/8000/playlist.m3u8"
-    },
-    {
       "url": "https://cdn-1.pishow.tv/live/1013/master.m3u8"
     },
     {
@@ -2708,9 +2135,6 @@
     },
     {
       "url": "https://linear-900.frequency.stream/dist/cineverse/900/hls/master/playlist.m3u8"
-    },
-    {
-      "url": "https://hls.newworldtv.com/nw-magazine/video/live.m3u8"
     },
     {
       "url": "https://df1zke3zj042m.cloudfront.net/playlist.m3u8"
@@ -2743,12 +2167,6 @@
       "url": "https://bozztv.com/rongo/rongo-AnandaTV/index.m3u8"
     },
     {
-      "url": "https://tezaurtv.md/stream/index.m3u8"
-    },
-    {
-      "url": "https://channel.streams.ovh:1936/balkanradiosalzburgtv/balkanradiosalzburgtv/playlist.m3u8"
-    },
-    {
       "url": "https://fox.hostlagarto.com:8081/pulatv/index.m3u8"
     },
     {
@@ -2770,13 +2188,7 @@
       "url": "https://cgentertainment-cgtv-1-it.samsung.wurl.tv/playlist.m3u8"
     },
     {
-      "url": "https://ma.anixa.tv/clips/stream/anixesd/index.m3u8"
-    },
-    {
       "url": "https://edge13.vedge.infomaniak.com/livecast/ik:event/manifest.m3u8"
-    },
-    {
-      "url": "https://ma.anixa.tv/clips/stream/anixehd/index.m3u8"
     },
     {
       "url": "https://5fc584f3f19c9.streamlock.net/genteopa/videogenteopa/playlist.m3u8"
@@ -2800,15 +2212,6 @@
       "url": "https://streamtv.intervenhosting.net:3592/stream/play.m3u8"
     },
     {
-      "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/3e22a9c278db4e3eb779afd42e41b0a6/index.m3u8"
-    },
-    {
-      "url": "https://seswa.bonce.tv/hls/bonceswa.m3u8"
-    },
-    {
-      "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/6e14bac6d0384e129521a4d005188bfb/index.m3u8"
-    },
-    {
       "url": "https://videostream.shockmedia.com.ar:19360/radio1045/radio1045.m3u8"
     },
     {
@@ -2816,9 +2219,6 @@
     },
     {
       "url": "https://fast-channels.sinclairstoryline.com/COMET/index.m3u8"
-    },
-    {
-      "url": "https://cdn-4.pishow.tv/live/1473/master.m3u8"
     },
     {
       "url": "https://ml-pull-dvc-myco.io:2096/EXPRESS_ENTERTAINMENT/index.m3u8"
@@ -2831,9 +2231,6 @@
     },
     {
       "url": "http://103.157.248.140:8000/play/a01p/index.m3u8"
-    },
-    {
-      "url": "https://cdn.freevisiontv.co.za/sttv/smil:1kzn.stream.smil/playlist.m3u8"
     },
     {
       "url": "https://bcovlive-a.akamaihd.net/7f5ec16d102f4b5d92e8e27bc95ff424/us-east-1/6240731308001/playlist.m3u8"
@@ -2851,9 +2248,6 @@
       "url": "https://ml-pull-dvc-myco.io:2096/SAB_ENTERTAINMENT/tracks-v1a1/mono.ts.m3u8"
     },
     {
-      "url": "https://hls2.nbcplus.na/hls/high_nbc3.m3u8"
-    },
-    {
       "url": "https://hls.247box.live/hls/stream.m3u8"
     },
     {
@@ -2869,9 +2263,6 @@
       "url": "https://circle-roku.amagi.tv/playlist.m3u8"
     },
     {
-      "url": "https://tv.btnrwanda.com:3432/live/bpluslive.m3u8"
-    },
-    {
       "url": "https://6476e46b58f91.streamlock.net/liveTrans/KURDS2211/playlist.m3u8"
     },
     {
@@ -2884,16 +2275,10 @@
       "url": "https://cdn4.skygo.mn/live/disk1/NHK_World_Premium/HLSv3-FTA/NHK_World_Premium.m3u8"
     },
     {
-      "url": "https://mumt04.tangotv.in/E24/index.m3u8"
-    },
-    {
       "url": "https://streamer103.neterra.tv/thisisbulgaria/live.m3u8"
     },
     {
       "url": "https://eu1.servers10.com:8081/8072/index.m3u8"
-    },
-    {
-      "url": "https://cdn.freevisiontv.co.za/sttv/smil:soweto.stream.smil/playlist.m3u8"
     },
     {
       "url": "https://fast-channels.sinclairstoryline.com/THENEST/index.m3u8"
@@ -2914,12 +2299,6 @@
       "url": "https://edge1.lifestreamcdn.com/live/impactroku1/index.m3u8"
     },
     {
-      "url": "https://livegeorouus.akamaized.net/100823/etvhd_2500/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b"
-    },
-    {
-      "url": "https://5c483b9d1019c.streamlock.net/8054/8054/playlist.m3u8"
-    },
-    {
       "url": "http://103.157.248.140:8000/play/a004/index.m3u8"
     },
     {
@@ -2938,13 +2317,7 @@
       "url": "https://live.gideo.video/americateve2/master.m3u8"
     },
     {
-      "url": "https://mumt04.tangotv.in/DARSHANATV/index.m3u8"
-    },
-    {
       "url": "https://toonixhls.wns.live/hls/stream.m3u8"
-    },
-    {
-      "url": "https://cdn.freevisiontv.co.za/sttv/smil:tshwane.stream.smil/playlist.m3u8"
     },
     {
       "url": "https://stream.eldo.lu/data/live/tele/eldotv/1080p.m3u8"
@@ -2962,9 +2335,6 @@
       "url": "https://cdn3.wowza.com/5/V2Y2VmhqMEFDTUkx/olelo/G0125_013/playlist.m3u8"
     },
     {
-      "url": "https://mumt01.tangotv.in/MHONEDILSE/index.m3u8"
-    },
-    {
       "url": "https://media.streambrothers.com:1936/8052/8052/playlist.m3u8"
     },
     {
@@ -2980,25 +2350,10 @@
       "url": "https://live.streamjo.com/eetlive/eettv.m3u8"
     },
     {
-      "url": "https://mumt01.tangotv.in/CAPTAIN/index.m3u8"
-    },
-    {
-      "url": "https://mumt01.tangotv.in/PASANDTV/index.m3u8"
-    },
-    {
       "url": "https://kcltv.livebox.co.in/kclhls/live.m3u8"
     },
     {
-      "url": "https://mumt01.tangotv.in/STUDIOYUVA/index.m3u8"
-    },
-    {
-      "url": "http://103.157.248.140:8000/play/a05i/index.m3u8"
-    },
-    {
       "url": "http://103.229.254.25:7001/play/a0db/index.m3u8"
-    },
-    {
-      "url": "https://live-bangla.akamaized.net/liveabr/playlist.m3u8"
     },
     {
       "url": "https://cdn3.wowza.com/5/dFA0TmRpeFdNVXhT/NetUp/ILTV.stream/playlist.m3u8"
@@ -3008,9 +2363,6 @@
     },
     {
       "url": "https://thm-it-roku.otteravision.com/thm/it/it.m3u8"
-    },
-    {
-      "url": "https://livefta.malimarcdn.com/ftaedge00/vatilaotv.stream/playlist.m3u8"
     },
     {
       "url": "https://estrellatv-oando.amagi.tv/playlist.m3u8"
@@ -3043,19 +2395,10 @@
       "url": "https://copacogen.desdeparaguay.net/universotv/universotv_py_alta/playlist.m3u8?admin=nacion"
     },
     {
-      "url": "https://mumt02.tangotv.in/BRIOTV/index.m3u8"
-    },
-    {
       "url": "https://c9851ec-rbm-hilv-fsly.cdn.redbee.live/L22/6d35e26e/1bffdaaf.isml/.m3u8"
     },
     {
       "url": "http://103.229.254.25:7001/play/a09z/index.m3u8"
-    },
-    {
-      "url": "https://mumt02.tangotv.in/DDMALAYALAM/index.m3u8"
-    },
-    {
-      "url": "https://mumt03.tangotv.in/ASIANETMIDDLEEAST/index.m3u8"
     },
     {
       "url": "https://kqeddt2.lls.pbs.org/kqeddt2-hls.m3u8"
@@ -3064,28 +2407,13 @@
       "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8"
     },
     {
-      "url": "https://mumt04.tangotv.in/VASANTHTV/index.m3u8"
-    },
-    {
       "url": "https://live20.bozztv.com/giatv/giatv-Infinittyott/Infinittyott/playlist.m3u8"
     },
     {
       "url": "https://live20.bozztv.com/giatvplayout7/giatv-208343/playlist.m3u8"
     },
     {
-      "url": "https://cdn4.skygo.mn/live/disk1/Friday/HLSv3-FTA/Friday.m3u8"
-    },
-    {
-      "url": "https://cdn4.skygo.mn/live/disk1/Che/HLSv3-FTA/Che.m3u8"
-    },
-    {
-      "url": "https://cdn4.skygo.mn/live/disk1/TNT4/HLSv3-FTA/TNT4.m3u8"
-    },
-    {
       "url": "https://kviedt2.lls.pbs.org/kviedt2-hls.m3u8"
-    },
-    {
-      "url": "https://mumt03.tangotv.in/AAKASHAATH/index.m3u8"
     },
     {
       "url": "https://cloud2.streaminglivehd.com:1936/8004/8004/playlist.m3u8"
@@ -3118,34 +2446,13 @@
       "url": "http://31.148.48.15/Poehali/index.m3u8"
     },
     {
-      "url": "http://31.148.48.15/Zee_TV_Russia/index.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/TNT4/index.m3u8"
-    },
-    {
       "url": "https://streaming.jarabacoatv.com/Jarabacoa_tv/playlist.m3u8"
     },
     {
       "url": "https://live3.tdm.com.mo/ch6/hd_ch6.live/playlist.m3u8"
     },
     {
-      "url": "https://mumt02.tangotv.in/SIRIKANNADAALLTIME/index.m3u8"
-    },
-    {
-      "url": "https://mumt02.tangotv.in/THANTHIONE/index.m3u8"
-    },
-    {
-      "url": "https://mumt03.tangotv.in/JAIHIND/index.m3u8"
-    },
-    {
       "url": "https://tele-stream.telecasa.net/live/st1/yunavision-hd/index.m3u8"
-    },
-    {
-      "url": "https://cdn4.skygo.mn/live/disk1/THT/HLSv3-FTA/THT.m3u8"
-    },
-    {
-      "url": "https://mumt03.tangotv.in/KERALAVISION/index.m3u8"
     },
     {
       "url": "https://cc-uyh1ow5zouoio.akamaized.net/WWBI/Amagi/ETV_Josh_IN/playlist.m3u8"
@@ -3154,40 +2461,16 @@
       "url": "https://lonestar-rakuten.amagi.tv/playlist.m3u8"
     },
     {
-      "url": "https://stmv1.srvif.com/tvcurucasp/tvcurucasp/playlist.m3u8"
-    },
-    {
       "url": "https://stmv1.srvif.com/tvvitoriamz/tvvitoriamz/playlist.m3u8"
     },
     {
       "url": "https://stmv1.srvif.com/loadingtv/loadingtv/playlist.m3u8"
     },
     {
-      "url": "https://streaming.softwarecreation.it/GoldTv/GoldTv/playlist.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/TNT/index.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/Che/index.m3u8"
-    },
-    {
       "url": "https://shls-live-enc.edgenextcdn.net/out/v1/18cffab0757d448ca6c1a686d330b346/index.m3u8"
     },
     {
-      "url": "https://streaming.softwarecreation.it/GoldTvSat/GoldTvSat/playlist.m3u8"
-    },
-    {
-      "url": "https://cdn-1.pishow.tv/live/393/master.m3u8"
-    },
-    {
-      "url": "https://rpn.bozztv.com/gusa/gusa-tvsvintage/index.m3u8"
-    },
-    {
       "url": "https://mntv.livebox.co.in/mntvhls/live.m3u8"
-    },
-    {
-      "url": "https://tv.hiruhost.com:1936/8012/8012/playlist.m3u8"
     },
     {
       "url": "http://stream1.ai-net.net:1935/gtv1/_definst_/smil:gtv.smil/playlist.m3u8"
@@ -3196,22 +2479,13 @@
       "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01438-ewscrippscompan-ionplus-tablo/playlist.m3u8"
     },
     {
-      "url": "https://mumt02.tangotv.in/VISSATV/index.m3u8"
-    },
-    {
       "url": "https://vod2live.univtec.com/manifest/89290956-94ab-4950-accb-a54bbd7e176f.m3u8"
-    },
-    {
-      "url": "https://server-23.stream-server.nl:1936/Magic-PowerRadio/Magic-PowerRadio/playlist.m3u8"
     },
     {
       "url": "http://103.229.254.25:7001/play/a0cs/index.m3u8"
     },
     {
       "url": "https://video.cdmx.gob.mx/redes/stream.m3u8"
-    },
-    {
-      "url": "http://103.229.254.25:7001/play/a070/index.m3u8"
     },
     {
       "url": "https://mhz-samsung-linear-ca.samsung.wurl.tv/playlist.m3u8"
@@ -3247,16 +2521,7 @@
       "url": "https://oitnhls.wns.live/hls/stream.m3u8"
     },
     {
-      "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_MUZTV/variant.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/M1_Global/index.m3u8"
-    },
-    {
       "url": "http://31.148.48.15/Match_Strana/index.m3u8"
-    },
-    {
-      "url": "https://turkhls.persiana.live/hls/stream.m3u8"
     },
     {
       "url": "https://monomax-uiripn.cdn.byteark.com/plain/th/1080p/index.m3u8"
@@ -3265,19 +2530,10 @@
       "url": "https://liveh34.vtvprime.vn/hls/KIX/04.m3u8"
     },
     {
-      "url": "http://cloud.logichost.in:1935/SWANTHAM/live/index.m3u8"
-    },
-    {
       "url": "https://unlimited1-cl-isp.dps.live/girovisual2/girovisual2.smil/playlist.m3u8"
     },
     {
-      "url": "https://d1msejlow1t3l4.cloudfront.net/fta/nepal1/chunks.m3u8"
-    },
-    {
       "url": "https://cdn-3.pishow.tv/live/1253/master.m3u8"
-    },
-    {
-      "url": "https://cdn-3.pishow.tv/live/1271/master.m3u8"
     },
     {
       "url": "https://cdn-3.pishow.tv/live/230/master.m3u8"
@@ -3358,9 +2614,6 @@
       "url": "https://tv2.fastcast4u.com:3943/stream/play.m3u8"
     },
     {
-      "url": "https://tv2.fastcast4u.com:3238/live/radiotelebostonlive.m3u8"
-    },
-    {
       "url": "https://stream-134630.castr.net/5fe35eae8c53540cab83659a/live_17ad3c50323511f08f79733d2dd68583/index.fmp4.m3u8"
     },
     {
@@ -3388,9 +2641,6 @@
       "url": "https://video-auth4.iol.pt/live_tvi_reality/live_tvi_reality/edge_servers/tvireality-720_passthrough/playlist.m3u8"
     },
     {
-      "url": "https://mumbai-edge.smartplaytv.in/ZeeTeluguHD/index.m3u8"
-    },
-    {
       "url": "https://5dcabf026b188.streamlock.net/OceansTV/livestream/playlist.m3u8"
     },
     {
@@ -3403,25 +2653,10 @@
       "url": "https://yta.unitedteleports.tv/hls/YTA.m3u8"
     },
     {
-      "url": "https://2-fss-1.streamhoster.com/pl_122/206338-3120682-1/playlist.m3u8"
-    },
-    {
       "url": "https://live.rojatv.cloud/rojatv/rojatv/index.m3u8"
     },
     {
-      "url": "http://wz4.dnip.com.br/fratevitv/fratevitv.sdp/playlist.m3u8"
-    },
-    {
       "url": "http://103.157.248.140:8000/play/a05x/index.m3u8"
-    },
-    {
-      "url": "http://103.157.248.140:8000/play/a00g/index.m3u8"
-    },
-    {
-      "url": "https://tvstreamcast.com/indonesiana.m3u8"
-    },
-    {
-      "url": "https://viewmedia7219.bozztv.com/wmedia/viewmedia100/web_002/Stream/playlist.m3u8"
     },
     {
       "url": "https://vs20.live.opencaster.com/bznudxxdtppv/index.m3u8"
@@ -3469,9 +2704,6 @@
       "url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/HistoryTV18HD.m3u8"
     },
     {
-      "url": "https://imagenuniversaltv.net:3741/live/tvslive.m3u8"
-    },
-    {
       "url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainsportstwo_all/playlist.m3u8"
     },
     {
@@ -3502,9 +2734,6 @@
       "url": "https://aegis-cloudfront-1.tubi.video/b474c2bb-b34d-4c53-a94b-c4ffe884563c/playlist.m3u8"
     },
     {
-      "url": "https://tv.picta.cu/telerebelde/telerebelde_1.m3u8"
-    },
-    {
       "url": "https://kwtspta.cdn.mangomolo.com/sp/smil:sp.stream.smil/chunklist.m3u8"
     },
     {
@@ -3532,9 +2761,6 @@
       "url": "https://d2jl8r92tdc3f1.cloudfront.net/out/v1/59419700344b4625b7cb0693ba265ea3/TVGindex_1.m3u8"
     },
     {
-      "url": "http://31.148.48.15/Match_Boec/index.m3u8"
-    },
-    {
       "url": "http://tvgrandenatalhd.duckdns.org:8080/hls/live.m3u8"
     },
     {
@@ -3544,19 +2770,7 @@
       "url": "http://31.148.48.15/Match_Igra_HD/index.m3u8"
     },
     {
-      "url": "http://31.148.48.15/Russkiy_Ekstrim/index.m3u8"
-    },
-    {
-      "url": "http://103.229.254.25:7001/play/a09q/index.m3u8"
-    },
-    {
-      "url": "http://103.157.248.140:8000/play/a01m/index.m3u8"
-    },
-    {
       "url": "http://31.148.48.15/Match_Arena_HD/index.m3u8"
-    },
-    {
-      "url": "https://zabava-htlive.cdn.ngenix.net/hls/CH_TV3/variant.m3u8"
     },
     {
       "url": "https://kwtsplta.cdn.mangomolo.com/spl/smil:spl.stream.smil/chunklist.m3u8"
@@ -3610,9 +2824,6 @@
       "url": "https://mts1.iptv-playoutcenter.de/mts/mts-web/playlist.m3u8"
     },
     {
-      "url": "https://fighthls.persiana.live/hls/stream.m3u8"
-    },
-    {
       "url": "https://amg19223-amg19223c3-amgplt0351.playout.now3.amagi.tv/playlist/amg19223-amg19223c3-amgplt0351/playlist.m3u8"
     },
     {
@@ -3634,9 +2845,6 @@
       "url": "https://svs.itworkscdn.net/asharqdocumentarylive/asharqdocumentary.smil/playlist_dvr.m3u8"
     },
     {
-      "url": "http://151.80.18.177:86/Disney_Channel_HD/index.m3u8"
-    },
-    {
       "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-3-usa/5d58265a862a476dc7f97694addb5ded/index.m3u8"
     },
     {
@@ -3644,12 +2852,6 @@
     },
     {
       "url": "https://cityeden.catcast.tv/content/38354/index.m3u8"
-    },
-    {
-      "url": "https://kiev1-cdn.lanet.tv/live/1008.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/365_dney/index.m3u8"
     },
     {
       "url": "https://amg00861-amg00861c6-stirr-us-8229.playouts.now.amagi.tv/playlist.m3u8"
@@ -3665,9 +2867,6 @@
     },
     {
       "url": "https://rightsboosterltd-scl-2-eu.rakuten.wurl.tv/playlist.m3u8"
-    },
-    {
-      "url": "https://viamotionhsi.netplus.ch/live/eds/disneychannelde/browser-HLS8/disneychannelde.m3u8"
     },
     {
       "url": "https://cootv.cootel.com.ni:8095/Canal40_WTV/playlist.m3u8"
@@ -3718,9 +2917,6 @@
       "url": "https://rpn.bozztv.com/gusa/gusa-tvsbowling/index.m3u8"
     },
     {
-      "url": "http://31.148.48.15/Istoriya/index.m3u8"
-    },
-    {
       "url": "https://amg00378-mavtv-amg00378c2-samsung-au-1790.playouts.now.amagi.tv/playlist/amg00378-mavtvfast-motorsportsnetwork-samsungau/playlist.m3u8"
     },
     {
@@ -3739,9 +2935,6 @@
       "url": "https://d3ehq1uaxory6w.cloudfront.net/out/v1/35c05f080f4e49a4b4eb031b5a14e505/TVG2index_2.m3u8"
     },
     {
-      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-spacetoon/d8382fb9ab4b2307058f12c7ea90db54/index.m3u8"
-    },
-    {
       "url": "https://www.opencaster.com/resources/hls_stream/hipodromojcp2.m3u8"
     },
     {
@@ -3755,9 +2948,6 @@
     },
     {
       "url": "http://103.157.248.140:8000/play/a012/index.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/Ani/index.m3u8"
     },
     {
       "url": "https://live20.bozztv.com/giatvplayout7/giatv-208314/playlist.m3u8"
@@ -3781,9 +2971,6 @@
       "url": "https://svs.itworkscdn.net/sat7kidslive/sat7kids.smil/playlist_dvr.m3u8"
     },
     {
-      "url": "https://livetr.teleromagna.it/mia/live/playlist.m3u8"
-    },
-    {
       "url": "https://cdn4.skygo.mn/live/disk1/Match_Planeta/HLSv3-FTA/Match_Planeta.m3u8"
     },
     {
@@ -3796,16 +2983,10 @@
       "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg02873-kravemedia-mtrspt1-distrotv/playlist.m3u8"
     },
     {
-      "url": "http://103.157.248.140:8000/play/a00k/index.m3u8"
-    },
-    {
       "url": "https://tvr-sport.lg.mncdn.com/tvrsport/smil:tvrsport.smil/chunklist_b5160000.m3u8"
     },
     {
       "url": "http://31.148.48.15/STS_Kids_HD/index.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/Mama/index.m3u8"
     },
     {
       "url": "https://ngtrk.dc.beltelecom.by/ngtrk/smil:belarus5.smil/playlist.m3u8"
@@ -3814,16 +2995,10 @@
       "url": "https://mn-nl.mncdn.com/gzttv/gzttv/playlist.m3u8"
     },
     {
-      "url": "https://rpn.bozztv.com/gusa/gusa-tvsboxing/index.m3u8"
-    },
-    {
       "url": "https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8"
     },
     {
       "url": "https://mn-nl.mncdn.com/dogusdyg_drone/cgtn/playlist.m3u8"
-    },
-    {
-      "url": "https://vod.tuva.ru/friday/index.m3u8"
     },
     {
       "url": "https://amg01082-cna-amg01082c1-rlaxx-us-11304.playouts.now.amagi.tv/playlist.m3u8"
@@ -3850,12 +3025,6 @@
       "url": "https://d36r8jifhgsk5j.cloudfront.net/Willow_TV.m3u8"
     },
     {
-      "url": "https://rpn.bozztv.com/gusa/gusa-tvs/index.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/Multimuzika/index.m3u8"
-    },
-    {
       "url": "https://mainstreammedia-worldoffreesportsintl-rakuten.amagi.tv/playlist.m3u8"
     },
     {
@@ -3865,13 +3034,7 @@
       "url": "http://201.217.246.42:44310/Live/3fcb6e26785fd8d415571b26dc3cf5d3/local-36_400.m3u8"
     },
     {
-      "url": "http://31.148.48.15/Multilandiya/index.m3u8"
-    },
-    {
       "url": "https://dazn-combat-rakuten.amagi.tv/hls/amagi_hls_data_rakutenAA-dazn-combat-rakuten/CDN/master.m3u8"
-    },
-    {
-      "url": "http://31.148.48.15/Rizhiy/index.m3u8"
     },
     {
       "url": "https://live.teleradiocom.tj/8/3m.m3u8"
@@ -3901,16 +3064,10 @@
       "url": "https://amg01821-amg01821c11-rlaxx-gb-10459.playouts.now.amagi.tv/playlist.m3u8"
     },
     {
-      "url": "https://scihls.persiana.live/hls/stream.m3u8"
-    },
-    {
       "url": "https://amg00861-amg00861c7-stirr-us-8227.playouts.now.amagi.tv/playlist.m3u8"
     },
     {
       "url": "https://rpn.bozztv.com/gusa/gusa-tvssportsbureau/index.m3u8"
-    },
-    {
-      "url": "https://video.xtrematv.com:3812/live/memoriastoonslive.m3u8"
     },
     {
       "url": "https://amg01821-amg01821c12-rlaxx-gb-10461.playouts.now.amagi.tv/playlist.m3u8"
@@ -3940,12 +3097,6 @@
       "url": "https://live-fi.tvkaista.net/sub/live.m3u8?src=freetv"
     },
     {
-      "url": "https://ptravelhls.persiana.live/hls/stream.m3u8"
-    },
-    {
-      "url": "http://103.229.254.25:7001/play/a0dl/index.m3u8"
-    },
-    {
       "url": "https://live-fi.tvkaista.net/tv5/live.m3u8?src=freetv"
     },
     {
@@ -3953,9 +3104,6 @@
     },
     {
       "url": "https://64b16f23efbee.streamlock.net/bejoy/bejoy/playlist.m3u8"
-    },
-    {
-      "url": "https://rpn.bozztv.com/gusa/gusa-tvsturbo/index.m3u8"
     },
     {
       "url": "https://muc3.iptv-playoutcenter.de/dokusat/dokusat1/playlist.m3u8"
@@ -3991,9 +3139,6 @@
       "url": "https://rpn.bozztv.com/gusa/gusa-tvswsn/index.m3u8"
     },
     {
-      "url": "https://rt-doc.rttv.com/dvr/rtdru/playlist.m3u8"
-    },
-    {
       "url": "https://5b622f07944df.streamlock.net/aghapykids.tv/aghapykids2/playlist.m3u8"
     },
     {
@@ -4006,25 +3151,16 @@
       "url": "https://amg00376-magellan-amg00376c5-samsung-au-1708.playouts.now.amagi.tv/playlist/amg00376-magellantv-magellantvnowww-samsungau/playlist.m3u8"
     },
     {
-      "url": "https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8"
-    },
-    {
       "url": "https://balapantv-stream.qazcdn.com/balapantv/balapantv/playlist.m3u8"
     },
     {
       "url": "https://5aafcc5de91f1.streamlock.net/atfal1.com/atfal2/playlist.m3u8"
     },
     {
-      "url": "https://rpn.bozztv.com/gusa/gusa-TVSCartoonNetwork/index.m3u8"
-    },
-    {
       "url": "https://rpn.bozztv.com/gusa/gusa-hitops/index.m3u8"
     },
     {
       "url": "https://amg00711-zylo-amg00711c10-rakuten-fr-6731.playouts.now.amagi.tv/playlist.m3u8"
-    },
-    {
-      "url": "https://tv.wracanal10.com:3300/live/chinolatvlive.m3u8"
     },
     {
       "url": "https://livestar.siliconweb.com/starvod/star4/star4.m3u8"
@@ -4042,22 +3178,10 @@
       "url": "https://stream8.cinerama.uz/1209/tracks-v1a1/playlist.m3u8"
     },
     {
-      "url": "https://stream8.cinerama.uz/1007/playlist.m3u8"
-    },
-    {
-      "url": "https://sirius.greenhosting.ru/MultimaniaRu/tracks-v1a1/mono.m3u8"
-    },
-    {
       "url": "https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8"
     },
     {
-      "url": "https://cdn-6.pishow.tv/live/1243/master.m3u8"
-    },
-    {
       "url": "https://sirius.greenhosting.ru/PingvinRu/video.m3u8"
-    },
-    {
-      "url": "http://s1.tv-nano.com/Nano_rec/index.m3u8"
     },
     {
       "url": "https://tv.balkanweb.com/news24/livestream/playlist.m3u8"
@@ -4075,22 +3199,10 @@
       "url": "https://ott-balancer.tvri.go.id/live/eds/SportHD/hls/SportHD.m3u8"
     },
     {
-      "url": "https://vodzong.mjunoon.tv:8087/streamtest/disckids-157-1/playlist.m3u8"
-    },
-    {
       "url": "https://streamdot.broadpeak.io/cff02a74da64d1459391ce1f72d58f1a/afxpstr/SportsConnect/index.m3u8"
     },
     {
-      "url": "https://stream.4fun.tv:8889/hls/4fk_high/index.m3u8"
-    },
-    {
-      "url": "https://ocko-live.ssl.cdn.cra.cz/channels/ocko/playlist.m3u8"
-    },
-    {
       "url": "https://2-fss-2.streamhoster.com/pl_140/amlst:200914-1298290/playlist.m3u8"
-    },
-    {
-      "url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=269"
     },
     {
       "url": "https://live20.bozztv.com/akamaissh101/ssh101/eurotvlive/playlist.m3u8"
@@ -4111,16 +3223,10 @@
       "url": "https://stream-us-east-1.getpublica.com/playlist.m3u8?network_id=71"
     },
     {
-      "url": "http://mkstream.servehttp.com:1940/AmouYazid/ay1/playlist.m3u8"
-    },
-    {
       "url": "http://sb.err.ee/live/etvpluss.m3u8"
     },
     {
       "url": "https://live20.bozztv.com/giatv/giatv-hlektratv/hlektratv/playlist.m3u8"
-    },
-    {
-      "url": "https://junhls.persiana.live/hls/stream.m3u8"
     },
     {
       "url": "http://media3.smc-host.com:1935/cycnow.com/smil:cyc.smil/playlist.m3u8"
@@ -4204,13 +3310,7 @@
       "url": "https://5f05e059699ae.streamlock.net/WEB_Smilik/ngrp:Smilik.stream-adaptive/playlist.m3u8"
     },
     {
-      "url": "https://x1co.com.br:8443/hls/stream.m3u8"
-    },
-    {
       "url": "https://stream.rtvze.ba/live/123/123.m3u8"
-    },
-    {
-      "url": "http://tv.mediacdn.ru/live/solntse/playlist.m3u8"
     },
     {
       "url": "https://ctv.dc.beltelecom.by/ctv/ctv.stream/playlist.m3u8"
@@ -4223,9 +3323,6 @@
     },
     {
       "url": "https://ms01.w24.at/R9/smil:liveeventR9.smil/playlist.m3u8"
-    },
-    {
-      "url": "https://bsttv.bonus-tv.ru/cdn/tamyr/playlist.m3u8"
     },
     {
       "url": "https://tv1.cloudcdn.bg/temp/livestream.m3u8"
@@ -4243,9 +3340,6 @@
       "url": "https://stream.luci.xyz/hls/LTV.m3u8"
     },
     {
-      "url": "https://stream.polar.cz/vctv/vctvlive-1/playlist.m3u8"
-    },
-    {
       "url": "https://live2.mediacdn.ru/sr1/tro/playlist.m3u8"
     },
     {
@@ -4256,9 +3350,6 @@
     },
     {
       "url": "https://w2.manasat.com/kkids/smil:kkids.smil/playlist.m3u8"
-    },
-    {
-      "url": "https://ebsonair.ebs.co.kr/ebsufamilypc/familypc1m/playlist.m3u8"
     },
     {
       "url": "http://193.225.32.62:8890/live.m3u8"
@@ -4339,28 +3430,16 @@
       "url": "http://live.cast-control.eu:1935/samiaki/samiaki/playlist.m3u8"
     },
     {
-      "url": "https://stream.mediawork.cz/retrotv/smil:retrotv2.smil/playlist.m3u8"
-    },
-    {
       "url": "https://5f22d76e220e1.streamlock.net:443/EntellaTV/EntellaTV/playlist.m3u8"
     },
     {
-      "url": "https://vysilani.zaktv.cz/broadcast/hls/utv/index.m3u8"
-    },
-    {
       "url": "https://59d7d6f47d7fc.streamlock.net/icarotv/icarotv/playlist.m3u8"
-    },
-    {
-      "url": "https://radm.mediacdn.ru/cdn/radost/playlist.m3u8"
     },
     {
       "url": "https://5f22d76e220e1.streamlock.net/eurotv/eurotv/playlist.m3u8"
     },
     {
       "url": "https://hls.savoir.media/live/stream.m3u8"
-    },
-    {
-      "url": "https://hrhls.akamaized.net/hls/live/2024525/hrhls/master.m3u8"
     },
     {
       "url": "http://video10.qtv.com.cn/drm/qtv6at/manifest.m3u8"
@@ -4378,19 +3457,10 @@
       "url": "https://2-fss-1.streamhoster.com/pl_148/206202-2980948-1/playlist.m3u8"
     },
     {
-      "url": "https://daserste-live.ard-mcdn.de/daserste/live/hls/de/master.m3u8"
-    },
-    {
       "url": "https://5f22d76e220e1.streamlock.net/medjugorjeitaliatv/medjugorjeitaliatv/playlist.m3u8"
     },
     {
-      "url": "https://ndrint.akamaized.net/hls/live/2020766/ndr_int/index.m3u8"
-    },
-    {
       "url": "https://webstream.multistream.it/memfs/a3195c96-f884-4c74-924f-2648814fc0b5.m3u8"
-    },
-    {
-      "url": "https://tagesschau.akamaized.net/hls/live/2020115/tagesschau/tagesschau_1/master.m3u8"
     },
     {
       "url": "https://5f22d76e220e1.streamlock.net/servizio01/servizio01/playlist.m3u8"
@@ -4411,22 +3481,13 @@
       "url": "https://onnitv.digitacdn.net/live/ott/onnitv/playlist.m3u8?organizationId=83459409&suiteItemId=83459780"
     },
     {
-      "url": "https://mcdn.br.de/br/fs/bfs_nord/hls/de/master.m3u8"
-    },
-    {
       "url": "https://stratus.stream.cespi.unlp.edu.ar/hls/tvunlp.m3u8"
     },
     {
       "url": "https://player-tvcultura.stream.uol.com.br/live/tvcultura.m3u8"
     },
     {
-      "url": "https://mcdn.br.de/br/fs/ard_alpha/hls/de/master.m3u8"
-    },
-    {
       "url": "https://br5093.streamingdevideo.com.br/abc/abc/playlist.m3u8"
-    },
-    {
-      "url": "https://srfs.akamaized.net/hls/live/689649/srfsgeo/index.m3u8"
     },
     {
       "url": "https://vod.tv7.fi/tv7-fi/_definst_/smil:tv7-fi.smil/playlist.m3u8"
@@ -4439,9 +3500,6 @@
     },
     {
       "url": "https://5f22d76e220e1.streamlock.net/primafree/primafree/playlist.m3u8"
-    },
-    {
-      "url": "https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_sh/master.m3u8"
     },
     {
       "url": "https://vod.tv7.fi/tv7-se/_definst_/smil:tv7-se.smil/playlist.m3u8"
@@ -4465,16 +3523,10 @@
       "url": "https://5f22d76e220e1.streamlock.net/primantenna14/primantenna14/playlist.m3u8"
     },
     {
-      "url": "https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_hh/master.m3u8"
-    },
-    {
       "url": "https://5f22d76e220e1.streamlock.net/reitv/reitv/playlist.m3u8"
     },
     {
       "url": "https://streaming.softwarecreation.it/LazioTv/LazioTv/playlist.m3u8"
-    },
-    {
-      "url": "https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_mv/master.m3u8"
     },
     {
       "url": "http://178.33.224.197:1935/ondaradioweb/ondaradioweb/playlist.m3u8"
@@ -4484,9 +3536,6 @@
     },
     {
       "url": "https://5f22d76e220e1.streamlock.net/rtm/rtm/playlist.m3u8"
-    },
-    {
-      "url": "https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_nds/master.m3u8"
     },
     {
       "url": "https://5dcabf026b188.streamlock.net/lanuovatvbas/livestream/playlist.m3u8"
@@ -4658,9 +3707,6 @@
     },
     {
       "url": "https://radioitaliatv.akamaized.net/hls/live/2093117/RadioitaliaTV/master.m3u8"
-    },
-    {
-      "url": "https://kikageohls.akamaized.net/hls/live/2022693/livetvkika_de/master.m3u8"
     },
     {
       "url": "https://redirector.rudo.video/hls-video/10b92cafdf3646cbc1e727f3dc76863621a327fd/t13/t13.smil/playlist.m3u8"
