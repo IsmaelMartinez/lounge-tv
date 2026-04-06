@@ -438,7 +438,8 @@ body.ctrl-on .vw { padding-bottom: 70px; }
     <div class="s-ft">
       <button class="sb" onclick="showModal()">+ Add</button>
       <button class="sb blue" onclick="openSearch()">&#x1F50D; Find</button>
-      <button class="sb" onclick="exportM3U()" title="Export favourites or all as M3U">&#x1F4E4; Export</button>
+      <button class="sb" onclick="exportAll()" title="Export all visible channels">&#x1F4E4; All</button>
+      <button class="sb" onclick="exportFavs()" title="Export favourites only">&#9733; Favs</button>
     </div>
   </div>
 
@@ -707,12 +708,14 @@ async function init() {
   tst(S.chs.length + ' curated channels loaded.' + (S.allValidated ? '' : ' (offline mode)'), 'ok');
 }
 
-function exportM3U() {
-  var hasFavs = S.favs.size > 0;
-  var hasOnline = S.chs.some(function(c) { return c.status === 'ok'; });
-  if (hasFavs) { doExport(S.chs.filter(function(c) { return S.favs.has(c.id); }), 'lounge-tv-favourites'); return; }
-  if (hasOnline) { doExport(S.chs.filter(function(c) { return c.status === 'ok'; }), 'lounge-tv-online'); return; }
+function exportAll() {
   doExport(S.fil, 'lounge-tv-channels');
+}
+
+function exportFavs() {
+  var favs = S.chs.filter(function(c) { return S.favs.has(c.id); });
+  if (!favs.length) { tst('No favourites to export', 'er'); return; }
+  doExport(favs, 'lounge-tv-favourites');
 }
 
 function doExport(channels, filename) {
