@@ -1,5 +1,58 @@
 # Roadmap
 
+```
+ LOUNGE TV — DEVELOPMENT ROADMAP
+ ════════════════════════════════════════════════════════════════════════
+
+ COMPLETED                          UP NEXT                 FUTURE
+ ─────────                          ───────                 ──────
+
+ ┌─────────────────────┐
+ │  PHASE 1            │
+ │  Single-file IPTV   │    ┌─────────────────────┐
+ │  player             │    │  PHASE 1.5          │
+ │                     ├───►│  webOS deployment   │    ┌─────────────────────┐
+ │  HLS.js, sidebar,   │    │  investigation      │    │  PHASE 2            │
+ │  favourites, IPTV   │    │                     ├───►│  Pi proxy backend   │
+ │  directory, health   │    │  Developer Mode,    │    │                     │
+ │  checker, M3U I/O,  │    │  ares-CLI, Content  │    │  CORS bypass, local │
+ │  PiP, dark theme    │    │  Store, CORS tests, │    │  network proxy on   │
+ │                     │    │  hosted web app     │    │  Raspberry Pi       │
+ │  ✅ DONE            │    │                     │    │                     │
+ └─────────────────────┘    │  ⬜ NEXT            │    │  ⬜ PLANNED         │
+                            └─────────────────────┘    └──────────┬──────────┘
+ ┌─────────────────────┐                                          │
+ │  PHASE 1.1          │                                          ▼
+ │  Curated channels   │                               ┌─────────────────────┐
+ │  + validation       │                               │  PHASE 3            │
+ │                     │                               │  Acestream engine   │
+ │  ~50 channels,      │                               │  bridge             │
+ │  validate.js,       │                               │                     │
+ │  GitHub Actions,    │                               │  P2P streaming via  │
+ │  weekly CI          │                               │  Pi, ace:// to HLS  │
+ │                     │                               │                     │
+ │  ✅ DONE            │                               │  ⬜ PLANNED         │
+ └─────────────────────┘                               └──────────┬──────────┘
+                                                                  │
+                                                                  ▼
+                                                       ┌─────────────────────┐
+                                                       │  PHASE 4            │
+                                                       │  EPG programme      │
+                                                       │  guide              │
+                                                       │                     │
+                                                       │  XMLTV, current/    │
+                                                       │  next info, grid    │
+                                                       │  guide view         │
+                                                       │                     │
+                                                       │  ⬜ PLANNED         │
+                                                       └─────────────────────┘
+
+ ────────────────────────────────────────────────────────────────────
+ Legend:  ✅ Done    ⬜ Next / Planned
+ Current focus ──► Phase 1.5: webOS deployment investigation
+ ────────────────────────────────────────────────────────────────────
+```
+
 ## Phase 1: Single-file IPTV player [DONE]
 
 The player works in any browser. 25 curated free-to-air channels load instantly with no network fetches on startup. Thousands more are available on demand via the IPTV directory panel (iptv-org, Free-TV). Health checking runs sequentially to keep mobile resource usage low.
