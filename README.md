@@ -47,7 +47,7 @@ Lounge TV works on LG webOS Smart TVs. See [docs/SETUP-WEBOS.md](docs/SETUP-WEBO
 
 ## Roadmap
 
-See [ROADMAP.md](ROADMAP.md) for the full roadmap. Current status: Phase 1 (single-file player) complete, Phase 1.5 (webOS deployment investigation) next.
+See [ROADMAP.md](ROADMAP.md) for the full roadmap. Current status: Phases 1 and 1.1 complete, Phase 1.5 (webOS deployment investigation) next.
 
 ## Contributing
 
