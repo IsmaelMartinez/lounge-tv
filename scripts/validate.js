@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const DATA_DIR = resolve(ROOT, 'data');
 const CHANNELS_PATH = resolve(DATA_DIR, 'channels.json');
-const CURATED_PATH = resolve(DATA_DIR, 'curated.json');
+const PICKS_PATH = resolve(DATA_DIR, 'picks.json');
 
 const SOURCES = [
   { key: 'uk', label: 'UK', url: 'https://iptv-org.github.io/iptv/countries/uk.m3u' },
@@ -20,14 +20,14 @@ const SOURCES = [
 ];
 
 const TIMEOUT = 6000;
-const DELAY = 100;
+const DELAY = 100; // ms between requests
 
 function withTimeout(promise, ms) {
   return Promise.race([
     promise,
     new Promise(resolve => setTimeout(() => resolve('fail'), ms))
   ]);
-} // ms between requests
+}
 
 function parseM3U(text) {
   const lines = text.split('\n');
@@ -148,17 +148,17 @@ async function main() {
   const fail = allChannels.filter(c => c.status === 'fail').length;
   console.log(`\nResults: ${ok} ok, ${geo} geo, ${fail} fail — written to data/channels.json`);
 
-  if (!existsSync(CURATED_PATH)) {
+  if (!existsSync(PICKS_PATH)) {
     const scaffold = {
       channels: allChannels
         .filter(c => c.status === 'ok')
         .slice(0, 50)
         .map(c => ({ url: c.url }))
     };
-    writeFileSync(CURATED_PATH, JSON.stringify(scaffold, null, 2) + '\n');
-    console.log(`Scaffolded data/curated.json with ${scaffold.channels.length} channels (edit this file to curate)`);
+    writeFileSync(PICKS_PATH, JSON.stringify(scaffold, null, 2) + '\n');
+    console.log(`Scaffolded data/picks.json with ${scaffold.channels.length} channels (edit this file to curate)`);
   } else {
-    console.log('data/curated.json already exists — not modified');
+    console.log('data/picks.json already exists — not modified');
   }
 }
 

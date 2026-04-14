@@ -61,7 +61,7 @@ Delivered: HLS playback via HLS.js, collapsible sidebar with channel list, group
 
 ## Phase 1.1: Curated channels with automated validation [DONE]
 
-Replaced the 25-channel baked-in list with a curated selection of ~50 reliably working channels, primarily UK-focused with international news, music, entertainment, and sports. A Node.js validation script tests streams from iptv-org playlists and writes results to data/channels.json. A hand-edited data/curated.json defines the curated picks. A GitHub Action runs validation weekly and commits updated results. The app loads both JSON files on startup, falling back to the built-in list if offline. The Find panel includes a "Validated" filter showing all working channels from the last validation run as a discovery pool.
+Replaced the 25-channel baked-in list with a hand-picked selection of 44 channels spanning UK, international news, music, entertainment, movies, documentaries, sports, and kids. A Node.js validation script tests streams from iptv-org playlists and writes results to `data/channels.json`. A hand-edited `data/picks.json` defines the curated picks by URL. A GitHub Action runs validation weekly and commits updated results. The app loads both JSON files on startup, falling back to the built-in list if offline. The Find panel includes a "Validated" filter showing all working channels from the last validation run as a discovery pool.
 
 ## Phase 1.5: LG webOS deployment investigation
 
