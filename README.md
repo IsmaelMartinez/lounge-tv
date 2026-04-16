@@ -30,7 +30,7 @@ Export your channel list as a downloadable M3U file: the "All" button exports th
 
 ## webOS deployment
 
-Lounge TV works on LG webOS Smart TVs. See [docs/SETUP-WEBOS.md](docs/SETUP-WEBOS.md) for deployment instructions using Developer Mode.
+Lounge TV works on LG webOS Smart TVs. See [docs/SETUP-WEBOS.md](docs/SETUP-WEBOS.md) for deployment instructions using Developer Mode, and [docs/WEBOS-INVESTIGATION.md](docs/WEBOS-INVESTIGATION.md) for the Phase 1.5 findings on deployment paths and CORS behaviour.
 
 ## Keyboard shortcuts
 

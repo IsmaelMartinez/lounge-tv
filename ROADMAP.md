@@ -67,6 +67,8 @@ Replaced the 25-channel baked-in list with a hand-picked selection of 44 channel
 
 Before building a proxy backend, validate that the webOS deployment path is viable and worth pursuing.
 
+Findings and test plan live in [docs/WEBOS-INVESTIGATION.md](docs/WEBOS-INVESTIGATION.md).
+
 Questions to answer:
 
 Developer Mode on webOS: how to enable it, the 50-hour session expiry, and whether rooting is practical for persistent installs. Document the full setup flow from scratch for someone who hasn't done it before.
