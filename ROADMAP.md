@@ -57,7 +57,9 @@ Outstanding: run the §5 CORS test matrix on a real TV.
 
 Introduce a minimal engine dispatcher — `playUrl(url, kind)` that routes to one of: native `<video>`, `hls.js`, `dash.js`, or (later) iframe/WHEP/Stremio-resolver. Each engine library lazy-loads on first use to keep the cold-start budget. `picks.json` and `channels.json` gain an optional `kind` field; when absent, kind is inferred from the URL (`.m3u8` → hls, `.mpd` → dash).
 
-Adds DASH playback with no DRM support (Widevine isn't available to sideloaded apps). Covers a lot of EU broadcaster streams that publish DASH alongside HLS.
+Adds DASH playback with no DRM support (Widevine isn't available to sideloaded apps). Covers DASH URLs users (or we) add manually.
+
+**Find-panel discovery stays HLS-only.** There is no DASH-equivalent of the iptv-org / Free-TV community playlists — M3U is the lingua franca and most public-facing DASH (BBC iPlayer, ARD Mediathek, France.tv) is geo-locked or Widevine-protected. Open DASH content exists as scattered test streams ([BBC R&D](https://rdmedia.bbc.co.uk/), [DASH-IF reference](https://reference.dashif.org/dash.js/)) — enough for smoke tests and hand-curated picks, not for discovery.
 
 ## Phase 1.7: YouTube integration
 
