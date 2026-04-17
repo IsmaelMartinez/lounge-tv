@@ -525,11 +525,90 @@ body.ctrl-on .vw { padding-bottom: 70px; }
 var S = {
   chs: [], fil: [], fi: 0, pid: -1, tab: 'all', grp: 'all',
   favs: new Set(JSON.parse(localStorage.getItem('lounge-tv-favs') || '[]')),
-  hls: null, hlsP: null, urls: new Set(), cache: {},
+  engine: null, engineP: null, urls: new Set(), cache: {},
   sr: [], srP: 0, srF: [], hcOn: false, hcX: false, grpQ: '', ctrlHover: false,
   allValidated: null
 };
 var PG = 50;
+
+/* ── Engine dispatcher ──
+ * Routes a URL to the right playback engine based on `kind` (or URL inference).
+ * HLS.js is loaded eagerly from the <head>; other engines lazy-load on first use.
+ * Channels may set kind="hls"|"dash"|"native"; inferKind() picks one from the URL otherwise.
+ */
+function loadScript(src) {
+  if (!loadScript.done) loadScript.done = {};
+  if (loadScript.done[src]) return loadScript.done[src];
+  loadScript.done[src] = new Promise(function(resolve, reject) {
+    var s = document.createElement('script');
+    s.src = src; s.async = true;
+    s.onload = function() { resolve(); };
+    s.onerror = function() { delete loadScript.done[src]; reject(new Error('Failed to load ' + src)); };
+    document.head.appendChild(s);
+  });
+  return loadScript.done[src];
+}
+
+var ENGINES = {
+  hls: {
+    url: null,
+    ready: function() { return typeof Hls !== 'undefined' && Hls.isSupported(); },
+    attach: function(v, url, opts, cb) {
+      var h = new Hls(opts || {maxBufferLength: 30, maxMaxBufferLength: 60, startLevel: -1, enableWorker: true});
+      h.loadSource(url); h.attachMedia(v);
+      h.on(Hls.Events.MANIFEST_PARSED, function() { cb.onReady && cb.onReady(); });
+      h.on(Hls.Events.ERROR, function(_, d) {
+        if (d.fatal && cb.onError) cb.onError(d.type === Hls.ErrorTypes.NETWORK_ERROR ? 'CORS/Network \u2014 needs proxy' : ('' + d.details));
+      });
+      return { destroy: function() { try { h.destroy(); } catch (e) {} } };
+    }
+  },
+  dash: {
+    url: 'https://cdn.dashjs.org/v4.7.4/dash.all.min.js',
+    ready: function() { return typeof dashjs !== 'undefined'; },
+    attach: function(v, url, opts, cb) {
+      var p = dashjs.MediaPlayer().create();
+      p.initialize(v, url, true);
+      p.on(dashjs.MediaPlayer.events.STREAM_INITIALIZED, function() { cb.onReady && cb.onReady(); });
+      p.on(dashjs.MediaPlayer.events.ERROR, function(e) {
+        if (cb.onError) cb.onError((e && e.error && (e.error.message || e.error)) || 'DASH error');
+      });
+      return { destroy: function() { try { p.reset(); } catch (e) {} } };
+    }
+  },
+  native: {
+    url: null,
+    ready: function() { return true; },
+    attach: function(v, url, opts, cb) {
+      var onMeta = function() { v.removeEventListener('loadedmetadata', onMeta); cb.onReady && cb.onReady(); };
+      var onErr = function() { v.removeEventListener('error', onErr); cb.onError && cb.onError('Playback failed'); };
+      v.addEventListener('loadedmetadata', onMeta);
+      v.addEventListener('error', onErr);
+      v.src = url;
+      return { destroy: function() { v.removeEventListener('loadedmetadata', onMeta); v.removeEventListener('error', onErr); } };
+    }
+  }
+};
+
+function inferKind(url) {
+  if (!url) return 'native';
+  var u = url.toLowerCase().split('?')[0].split('#')[0];
+  if (u.indexOf('.mpd') >= 0) return 'dash';
+  if (u.indexOf('.m3u8') >= 0) return 'hls';
+  if (u.indexOf('.mp4') >= 0 || u.indexOf('.webm') >= 0 || u.indexOf('.ogg') >= 0) return 'native';
+  return 'hls';
+}
+
+function loadEngine(kind) {
+  var e = ENGINES[kind];
+  if (!e) return Promise.reject(new Error('Unknown engine: ' + kind));
+  if (e.ready()) return Promise.resolve(e);
+  if (!e.url) return Promise.reject(new Error(kind + ' not supported'));
+  return loadScript(e.url).then(function() {
+    if (!e.ready()) throw new Error(kind + ' failed to initialise');
+    return e;
+  });
+}
 
 var BUILT = [
   {name:"Big Buck Bunny",group:"Test",url:"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"},
@@ -557,6 +636,7 @@ var BUILT = [
   {name:"Das Erste",group:"Germany",url:"https://derste247liveint.akamaized.net/hls/live/2013718/derste247int/master.m3u8"},
   {name:"NASA TV",group:"Science",url:"https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8"},
   {name:"Lofi Girl Radio",group:"Music",url:"https://play.streamafrica.net/lofiradio"},
+  {name:"DASH Test (BBC R&D)",group:"Test",kind:"dash",url:"https://rdmedia.bbc.co.uk/elephants_dream/1/client_manifest-all.mpd"},
 ];
 
 var BRW = [
@@ -824,7 +904,7 @@ function removeDead() {
 
 /* ── Player controls ── */
 function togglePlay() { var v = document.getElementById('vid'); if (v.paused) v.play().catch(function() {}); else v.pause(); }
-function doStop() { var v = document.getElementById('vid'); v.pause(); v.currentTime = 0; if (S.hls) { S.hls.destroy(); S.hls = null; } }
+function doStop() { var v = document.getElementById('vid'); v.pause(); v.currentTime = 0; if (S.engine) { S.engine.destroy(); S.engine = null; } }
 function skip(s) { var v = document.getElementById('vid'); if (isFinite(v.duration)) v.currentTime = Math.max(0, Math.min(v.duration, v.currentTime + s)); }
 function onSeek(val) { var v = document.getElementById('vid'); if (isFinite(v.duration)) v.currentTime = (val / 1000) * v.duration; }
 function toggleMute() { var v = document.getElementById('vid'); v.muted = !v.muted; document.getElementById('bMt').textContent = v.muted ? '\u{1F507}' : '\u{1F50A}'; }
@@ -869,17 +949,17 @@ function play(fi) {
   var ch = S.fil[fi];
   if (!ch) return;
   S.pid = ch.id; S.fi = fi;
-  playStream(ch.name, ch.url, ch.group);
+  playStream(ch.name, ch.url, ch.group, ch.kind);
   if (window.innerWidth <= 900 && !document.getElementById('side').classList.contains('closed')) togS();
   rL();
 }
 
-function playStream(name, url, group) {
+function playStream(name, url, group, kind) {
   var v = document.getElementById('vid'), ov = document.getElementById('ov');
   document.getElementById('oi').innerHTML = '<div class="sp"></div>';
   document.getElementById('ot').textContent = 'Loading ' + name + '...';
   ov.classList.remove('h');
-  if (S.hls) { S.hls.destroy(); S.hls = null; }
+  if (S.engine) { S.engine.destroy(); S.engine = null; }
   v.removeAttribute('src'); v.load();
 
   var ok = function() {
@@ -899,45 +979,51 @@ function playStream(name, url, group) {
     ov.classList.remove('h');
   };
 
-  if (typeof Hls !== 'undefined' && Hls.isSupported()) {
-    var h = new Hls({maxBufferLength: 30, maxMaxBufferLength: 60, startLevel: -1, enableWorker: true});
-    h.loadSource(url); h.attachMedia(v);
-    h.on(Hls.Events.MANIFEST_PARSED, function() {
-      v.play().then(ok).catch(function() {
-        document.getElementById('oi').textContent = '\u25B6\uFE0F';
-        document.getElementById('ot').textContent = 'Tap to play';
-        ov.classList.remove('h'); ov.style.cursor = 'pointer';
-        ov.onclick = function(e) { e.stopPropagation(); v.play().then(ok); ov.onclick = null; ov.style.cursor = ''; };
-      });
+  var k = kind || inferKind(url);
+  // Safari-style native HLS fallback when HLS.js can't run.
+  if (k === 'hls' && !ENGINES.hls.ready() && v.canPlayType('application/vnd.apple.mpegurl')) k = 'native';
+
+  loadEngine(k).then(function(e) {
+    S.engine = e.attach(v, url, null, {
+      onReady: function() {
+        v.play().then(ok).catch(function() {
+          document.getElementById('oi').textContent = '\u25B6\uFE0F';
+          document.getElementById('ot').textContent = 'Tap to play';
+          ov.classList.remove('h'); ov.style.cursor = 'pointer';
+          ov.onclick = function(e) { e.stopPropagation(); v.play().then(ok); ov.onclick = null; ov.style.cursor = ''; };
+        });
+      },
+      onError: fl
     });
-    h.on(Hls.Events.ERROR, function(_, d) {
-      if (d.fatal) fl(d.type === Hls.ErrorTypes.NETWORK_ERROR ? 'CORS/Network \u2014 needs proxy' : '' + d.details);
-    });
-    S.hls = h;
-  } else if (v.canPlayType('application/vnd.apple.mpegurl')) {
-    v.src = url;
-    v.addEventListener('loadedmetadata', function() { v.play().then(ok); }, {once: true});
-  }
+  }).catch(function(err) { fl(err && err.message); });
 }
 
-function playPip(name, url) {
+function playPip(name, url, kind) {
   var pip = document.getElementById('pip'), v = document.getElementById('pvid');
   pip.classList.add('vis');
   document.getElementById('pn').textContent = name;
-  if (S.hlsP) { S.hlsP.destroy(); S.hlsP = null; }
+  if (S.engineP) { S.engineP.destroy(); S.engineP = null; }
   v.removeAttribute('src'); v.load();
-  if (typeof Hls !== 'undefined' && Hls.isSupported()) {
-    var h = new Hls({maxBufferLength: 10, maxMaxBufferLength: 20, startLevel: 0});
-    h.loadSource(url); h.attachMedia(v);
-    h.on(Hls.Events.MANIFEST_PARSED, function() { v.play().catch(function() {}); });
-    h.on(Hls.Events.ERROR, function(_, d) {
-      if (d.fatal) { document.getElementById('pn').textContent = name + ' \u2014 failed'; document.querySelector('.pip-dt').style.background = 'var(--rd)'; }
-    });
-    S.hlsP = h;
-  }
   document.querySelector('.pip-dt').style.background = 'var(--ac)';
+
+  var k = kind || inferKind(url);
+  if (k === 'hls' && !ENGINES.hls.ready() && v.canPlayType('application/vnd.apple.mpegurl')) k = 'native';
+
+  var opts = k === 'hls' ? {maxBufferLength: 10, maxMaxBufferLength: 20, startLevel: 0} : null;
+  loadEngine(k).then(function(e) {
+    S.engineP = e.attach(v, url, opts, {
+      onReady: function() { v.play().catch(function() {}); },
+      onError: function() {
+        document.getElementById('pn').textContent = name + ' \u2014 failed';
+        document.querySelector('.pip-dt').style.background = 'var(--rd)';
+      }
+    });
+  }).catch(function() {
+    document.getElementById('pn').textContent = name + ' \u2014 failed';
+    document.querySelector('.pip-dt').style.background = 'var(--rd)';
+  });
 }
-function closePip() { document.getElementById('pip').classList.remove('vis'); if (S.hlsP) { S.hlsP.destroy(); S.hlsP = null; } }
+function closePip() { document.getElementById('pip').classList.remove('vis'); if (S.engineP) { S.engineP.destroy(); S.engineP = null; } }
 
 function zap(d) {
   var cur = S.chs.findIndex(function(c) { return c.id === S.pid; });

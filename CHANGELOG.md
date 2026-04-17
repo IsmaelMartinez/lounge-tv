@@ -5,6 +5,10 @@
 - Remove unused `data/curated.json` (superseded by `data/picks.json`).
 - Fix `scripts/validate.js` to scaffold `data/picks.json` instead of `curated.json` on first run.
 - Documentation refresh across README, ARCHITECTURE, ROADMAP, and CHANGELOG.
+- Add Phase 1.5 webOS deployment investigation doc (`docs/WEBOS-INVESTIGATION.md`) covering Developer Mode, ares-CLI packaging, Content Store trade-offs, hosted-web-app path, and a CORS test matrix.
+- Add multi-protocol streaming feasibility doc (`docs/MULTI-PROTOCOL-FEASIBILITY.md`) scoring HLS/DASH/YouTube/Twitch/WebRTC/WebTorrent/Stremio against webOS browser constraints, with a proposed roadmap delta.
+- Reposition the roadmap from IPTV player to universal stream player: add phases 1.6 (protocol abstraction + DASH), 1.7 (YouTube), 1.8 (Twitch), 2.5 (Stremio debrid), 3.5 (WHEP).
+- Introduce a pluggable playback engine dispatcher (`ENGINES`, `inferKind`, `loadEngine`). HLS.js stays eager; dash.js lazy-loads on first `.mpd` or `kind: "dash"` channel. Channels may now set an explicit `kind` field.
 
 ## 1.1.0 (2026-04-06)
 

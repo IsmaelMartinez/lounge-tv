@@ -4,7 +4,11 @@ Lounge TV is a single self-contained HTML file with inline CSS and JavaScript. T
 
 ## Stack
 
-The only external dependency is HLS.js (loaded from cdnjs CDN), which provides HLS stream playback using the Media Source Extensions API. Fonts (DM Sans and Space Mono) are loaded from Google Fonts.
+HLS.js (loaded eagerly from cdnjs) provides HLS playback via Media Source Extensions. Additional engines are lazy-loaded on first use: dash.js for MPEG-DASH streams. Fonts (DM Sans and Space Mono) come from Google Fonts.
+
+## Playback engine dispatcher
+
+`playStream(name, url, group, kind)` routes to one of the engines registered in `ENGINES`: `hls` (HLS.js), `dash` (dash.js, lazy-loaded), or `native` (plain `<video src>` for MP4/WebM or Safari's built-in HLS). `inferKind(url)` picks a default from the URL extension (`.m3u8` → hls, `.mpd` → dash, `.mp4`/`.webm`/`.ogg` → native). Channels may set an explicit `kind` field in `picks.json` / `channels.json` to override inference. Each engine exposes a uniform `attach(video, url, opts, { onReady, onError })` returning a `{ destroy }` handle stored on `S.engine` (main player) or `S.engineP` (PiP). Adding a new protocol is a single entry in `ENGINES` plus an `inferKind` rule.
 
 ## Structure
 
