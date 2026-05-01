@@ -834,7 +834,7 @@ function rF(tabFiltered) {
     '<input class="fl-search" id="gq" placeholder="\u{1F50D} Filter groups..." value="' + (S.grpQ || '') + '" oninput="S.grpQ=this.value;ref();">' +
     '<div class="fl ' + (S.grp === 'all' ? 'on' : '') + '" onclick="sgrp(\'all\')">All (' + total + ')</div>' +
     show.map(function(x) {
-      return '<div class="fl ' + (x.g === S.grp ? 'on' : '') + '" onclick="sgrp(\'' + esc(x.g) + '\')">' + x.g + ' (' + x.n + ')</div>';
+      return '<div class="fl ' + (x.g === S.grp ? 'on' : '') + '" onclick="sgrp(\'' + escH(esc(x.g)) + '\')">' + escH(x.g) + ' (' + x.n + ')</div>';
     }).join('') +
     (more ? '<div class="fl" style="color:var(--bl)">+' + more + ' more\u2026</div>' : '');
 }
@@ -1140,6 +1140,7 @@ function fltSR() {
   S.srF = r; rSR();
 }
 function esc(s) { return s.replace(/\\/g, '\\\\').replace(/'/g, "\\'"); }
+function escH(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
 function rSR() {
   var r = S.srF, sh = (S.srP + 1) * PG, pg = r.slice(0, sh), more = r.length > sh;
   var el = document.getElementById('srl');
