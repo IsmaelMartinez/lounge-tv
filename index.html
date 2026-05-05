@@ -592,11 +592,17 @@ var ENGINES = {
 
 function inferKind(url) {
   if (!url) return 'native';
+  if (url.toLowerCase().indexOf('acestream://') === 0) return 'acestream';
   var u = url.toLowerCase().split('?')[0].split('#')[0];
   if (u.indexOf('.mpd') >= 0) return 'dash';
   if (u.indexOf('.m3u8') >= 0) return 'hls';
   if (u.indexOf('.mp4') >= 0 || u.indexOf('.webm') >= 0 || u.indexOf('.ogg') >= 0) return 'native';
   return 'hls';
+}
+
+function aceToHls(url) {
+  var hash = url.replace(/^acestream:\/\//i, '');
+  return 'http://127.0.0.1:6878/ace/manifest.m3u8?id=' + hash;
 }
 
 function loadEngine(kind) {
@@ -683,7 +689,7 @@ function pm(t) {
         group: (m.match(/group-title="([^"]*)"/) || [])[1] || 'General',
         logo: (m.match(/tvg-logo="([^"]*)"/) || [])[1] || ''
       };
-    } else if (l.indexOf('#') !== 0 && (l.indexOf('http://') === 0 || l.indexOf('https://') === 0)) {
+    } else if (l.indexOf('#') !== 0 && (l.indexOf('http://') === 0 || l.indexOf('https://') === 0 || l.toLowerCase().indexOf('acestream://') === 0)) {
       c.url = l; r.push(c); c = {};
     }
   }
@@ -980,6 +986,7 @@ function playStream(name, url, group, kind) {
   };
 
   var k = kind || inferKind(url);
+  if (k === 'acestream') { url = aceToHls(url); k = 'hls'; }
   // Safari-style native HLS fallback when HLS.js can't run.
   if (k === 'hls' && !ENGINES.hls.ready() && v.canPlayType('application/vnd.apple.mpegurl')) k = 'native';
 
@@ -1007,6 +1014,7 @@ function playPip(name, url, kind) {
   document.querySelector('.pip-dt').style.background = 'var(--ac)';
 
   var k = kind || inferKind(url);
+  if (k === 'acestream') { url = aceToHls(url); k = 'hls'; }
   if (k === 'hls' && !ENGINES.hls.ready() && v.canPlayType('application/vnd.apple.mpegurl')) k = 'native';
 
   var opts = k === 'hls' ? {maxBufferLength: 10, maxMaxBufferLength: 20, startLevel: 0} : null;
