@@ -593,20 +593,28 @@ var ENGINES = {
     ready: function() { return typeof WebTorrent !== 'undefined'; },
     attach: function(v, url, opts, cb) {
       var client = new WebTorrent();
-      client.on('error', function(err) { if (cb.onError) cb.onError((err && err.message) || 'WebTorrent error'); });
+      var destroyed = false;
+      client.on('error', function(err) {
+        if (destroyed) return;
+        if (cb.onError) cb.onError((err && err.message) || 'WebTorrent error');
+      });
       client.add(url, function(torrent) {
+        if (destroyed) return;
         var VIDEO_EXT = /\.(mp4|webm|mov|ogv|mkv|avi|m4v)$/i;
         var files = torrent.files.filter(function(f) { return VIDEO_EXT.test(f.name); });
-        if (!files.length) files = torrent.files.slice();
+        if (!files.length) {
+          if (cb.onError) cb.onError('No playable video found in torrent');
+          return;
+        }
         files.sort(function(a, b) { return b.length - a.length; });
         var file = files[0];
-        if (!file) { if (cb.onError) cb.onError('No playable file in torrent'); return; }
         file.renderTo(v, function(err) {
+          if (destroyed) return;
           if (err) { if (cb.onError) cb.onError((err && err.message) || 'Render failed'); return; }
           if (cb.onReady) cb.onReady();
         });
       });
-      return { destroy: function() { try { client.destroy(); } catch (e) {} } };
+      return { destroy: function() { destroyed = true; try { client.destroy(); } catch (e) {} } };
     }
   }
 };
