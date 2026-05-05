@@ -534,7 +534,7 @@ var PG = 50;
 /* ── Engine dispatcher ──
  * Routes a URL to the right playback engine based on `kind` (or URL inference).
  * HLS.js is loaded eagerly from the <head>; other engines lazy-load on first use.
- * Channels may set kind="hls"|"dash"|"native"; inferKind() picks one from the URL otherwise.
+ * Channels may set kind="hls"|"dash"|"native"|"webtorrent"; inferKind() picks one from the URL otherwise.
  */
 function loadScript(src) {
   if (!loadScript.done) loadScript.done = {};
