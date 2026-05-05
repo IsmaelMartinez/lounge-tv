@@ -534,7 +534,7 @@ var PG = 50;
 /* ── Engine dispatcher ──
  * Routes a URL to the right playback engine based on `kind` (or URL inference).
  * HLS.js is loaded eagerly from the <head>; other engines lazy-load on first use.
- * Channels may set kind="hls"|"dash"|"native"; inferKind() picks one from the URL otherwise.
+ * Channels may set kind="hls"|"dash"|"native"|"webtorrent"; inferKind() picks one from the URL otherwise.
  */
 function loadScript(src) {
   if (!loadScript.done) loadScript.done = {};
@@ -587,13 +587,44 @@ var ENGINES = {
       v.src = url;
       return { destroy: function() { v.removeEventListener('loadedmetadata', onMeta); v.removeEventListener('error', onErr); } };
     }
+  },
+  webtorrent: {
+    url: 'https://cdn.jsdelivr.net/npm/webtorrent@2/webtorrent.min.js',
+    ready: function() { return typeof WebTorrent !== 'undefined'; },
+    attach: function(v, url, opts, cb) {
+      var client = new WebTorrent();
+      var destroyed = false;
+      client.on('error', function(err) {
+        if (destroyed) return;
+        if (cb.onError) cb.onError((err && err.message) || 'WebTorrent error');
+      });
+      client.add(url, function(torrent) {
+        if (destroyed) return;
+        var VIDEO_EXT = /\.(mp4|webm|mov|ogv|mkv|avi|m4v)$/i;
+        var files = torrent.files.filter(function(f) { return VIDEO_EXT.test(f.name); });
+        if (!files.length) {
+          if (cb.onError) cb.onError('No playable video found in torrent');
+          return;
+        }
+        files.sort(function(a, b) { return b.length - a.length; });
+        var file = files[0];
+        file.renderTo(v, function(err) {
+          if (destroyed) return;
+          if (err) { if (cb.onError) cb.onError((err && err.message) || 'Render failed'); return; }
+          if (cb.onReady) cb.onReady();
+        });
+      });
+      return { destroy: function() { destroyed = true; try { client.destroy(); } catch (e) {} } };
+    }
   }
 };
 
 function inferKind(url) {
   if (!url) return 'native';
+  if (/^magnet:/i.test(url)) return 'webtorrent';
   if (url.toLowerCase().indexOf('acestream://') === 0) return 'acestream';
   var u = url.toLowerCase().split('?')[0].split('#')[0];
+  if (u.slice(-8) === '.torrent') return 'webtorrent';
   if (u.indexOf('.mpd') >= 0) return 'dash';
   if (u.indexOf('.m3u8') >= 0) return 'hls';
   if (u.indexOf('.mp4') >= 0 || u.indexOf('.webm') >= 0 || u.indexOf('.ogg') >= 0) return 'native';
@@ -643,6 +674,7 @@ var BUILT = [
   {name:"NASA TV",group:"Science",url:"https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8"},
   {name:"Lofi Girl Radio",group:"Music",url:"https://play.streamafrica.net/lofiradio"},
   {name:"DASH Test (BBC R&D)",group:"Test",kind:"dash",url:"https://rdmedia.bbc.co.uk/elephants_dream/1/client_manifest-all.mpd"},
+  {name:"Sintel (WebTorrent)",group:"Test",url:"magnet:?xt=urn:btih:08ada5a7a6183aae1e09d831df6748d566095a10&dn=Sintel&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://tracker.coppersurfer.tk:6969"},
 ];
 
 var BRW = [
